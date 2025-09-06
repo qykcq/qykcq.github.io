@@ -1,0 +1,62 @@
+
+:root{
+  --bg:#ffffff;
+  --text:#1a1a1a;
+  --muted:#5b6471;
+  --primary:#0b57d0;
+  --border:#e6e8ec;
+  --shade:#f7f8fa;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.7;
+}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{
+  display:grid;
+  grid-template-columns:320px 1fr;
+  min-height:100vh;
+}
+.sidebar{
+  padding:28px 24px;
+  border-right:1px solid var(--border);
+  background:var(--shade);
+  position:sticky;top:0;height:100vh;overflow:auto;
+}
+.brand{
+  display:flex;align-items:center;gap:14px;margin-bottom:18px
+}
+.avatar{
+  width:64px;height:64px;border-radius:50%;
+  background:radial-gradient(circle at 30% 30%, #b3c7ff, #7aa2f7);
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-weight:700;font-size:22px;letter-spacing:.5px
+}
+.name{font-size:22px;font-weight:800;margin:0}
+.role{margin:2px 0 0;color:var(--muted);font-size:14px}
+.nav{display:flex;flex-direction:column;gap:8px;margin:14px 0 22px}
+.nav a{
+  padding:10px 12px;border-radius:10px;color:var(--text);border:1px solid transparent;
+}
+.nav a:hover{background:white;border-color:var(--border)}
+.quick a{display:inline-block;margin-right:8px;margin-top:6px}
+.main{padding:32px 32px 64px}
+.section{max-width:880px;margin:0 auto 36px}
+.section h2{font-size:22px;margin:0 0 10px}
+.card{background:white;border:1px solid var(--border);border-radius:12px;padding:18px;margin-top:10px}
+.list{display:grid;gap:12px}
+.pub .meta{color:var(--muted);font-size:14px}
+.badge{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:4px 10px;font-size:12px;color:var(--muted);margin-right:6px}
+.inline{display:flex;flex-wrap:wrap;gap:6px}
+.kv{display:grid;grid-template-columns:160px 1fr;gap:8px}
+.footer{max-width:880px;margin:40px auto;color:var(--muted);font-size:13px}
+@media (max-width:960px){
+  .container{grid-template-columns:1fr}
+  .sidebar{position:relative;height:auto}
+}
