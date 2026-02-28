@@ -12,8 +12,8 @@
             theme: {
                 extend: {
                     colors: {
-                        klein: '#002FA7', // 克莱因蓝主色
-                        kleinLight: '#0047AB', // 克莱因蓝浅色调（悬停）
+                        neon: '#39FF14', // 霓虹绿主色
+                        neonLight: '#73FF47', // 霓虹绿浅色调（悬停）
                         grayLight: '#F5F7FA', // 浅灰背景
                         grayDark: '#333647', // 深灰文字
                     },
@@ -27,19 +27,19 @@
     <style type="text/tailwindcss">
         @layer utilities {
             .section-title {
-                @apply text-2xl md:text-3xl font-bold text-klein border-b-2 border-klein pb-2 mb-6;
+                @apply text-2xl md:text-3xl font-bold text-neon border-b-2 border-neon pb-2 mb-6;
             }
             .card {
                 @apply bg-white rounded-lg shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow duration-300;
             }
             .link-item {
-                @apply text-klein hover:text-kleinLight underline underline-offset-4 transition-colors duration-300;
+                @apply text-neon hover:text-neonLight underline underline-offset-4 transition-colors duration-300;
             }
             .icon-text {
                 @apply flex items-center gap-2 text-grayDark;
             }
             .publication-card {
-                @apply border-l-4 border-klein pl-4 py-2 mb-4 hover:bg-grayLight rounded-r transition-colors duration-300;
+                @apply border-l-4 border-neon pl-4 py-2 mb-4 hover:bg-grayLight rounded-r transition-colors duration-300;
             }
         }
         html {
@@ -55,13 +55,13 @@
     <!-- 导航栏 -->
     <nav class="sticky top-0 bg-white shadow-sm z-50 py-4 px-6 md:px-12">
         <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center">
-            <h1 class="text-xl md:text-2xl font-bold text-klein">Yunke Qu</h1>
+            <h1 class="text-xl md:text-2xl font-bold text-neon">Yunke Qu</h1>
             <div class="flex gap-6 mt-4 md:mt-0">
-                <a href="#about" class="hover:text-klein transition-colors">About</a>
-                <a href="#education" class="hover:text-klein transition-colors">Education</a>
-                <a href="#experience" class="hover:text-klein transition-colors">Experience</a>
-                <a href="#publications" class="hover:text-klein transition-colors">Publications</a>
-                <a href="#contact" class="hover:text-klein transition-colors">Contact</a>
+                <a href="#about" class="hover:text-neon transition-colors">About</a>
+                <a href="#education" class="hover:text-neon transition-colors">Education</a>
+                <a href="#experience" class="hover:text-neon transition-colors">Experience</a>
+                <a href="#publications" class="hover:text-neon transition-colors">Publications</a>
+                <a href="#contact" class="hover:text-neon transition-colors">Contact</a>
             </div>
         </div>
     </nav>
@@ -69,15 +69,15 @@
     <main class="max-w-7xl mx-auto px-6 md:px-12 py-12">
         <!-- 个人信息 -->
         <section id="about" class="mb-16">
-            <div class="bg-klein text-white rounded-lg shadow-sm p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-8">
+            <div class="bg-neon text-black rounded-lg shadow-sm p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-8">
                 <div class="md:w-1/2">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Yunke Qu</h2>
                     <p class="text-lg mb-6">PhD in Artificial Intelligence | University of Queensland</p>
-                    <p class="text-sm text-gray-200 mb-6">Research Focus: Recommender Systems, Multimodal Learning, Parameter-Efficient Finetuning, Model Compression, AutoML, Reinforcement Learning</p>
+                    <p class="text-sm text-gray-800 mb-6">Research Focus: Recommender Systems, Multimodal Learning, Parameter-Efficient Finetuning, Model Compression, AutoML, Reinforcement Learning</p>
 
                 </div>
                 <div class="md:w-1/2 flex justify-center">
-                    <div class="w-64 h-64 bg-white rounded-full flex items-center justify-center text-klein text-6xl">
+                    <div class="w-64 h-64 bg-black rounded-full flex items-center justify-center text-neon text-6xl">
                         <i class="fa fa-user-circle-o" aria-hidden="true"></i>
                     </div>
                 </div>
@@ -91,14 +91,14 @@
                 <!-- PhD -->
                 <div class="card">
                     <h3 class="text-xl font-bold mb-2">University of Queensland</h3>
-                    <p class="text-klein font-semibold mb-1">PhD in Artificial Intelligence</p>
+                    <p class="text-neon font-semibold mb-1">PhD in Artificial Intelligence</p>
                     <p class="text-sm text-gray-600 mb-3">Apr 2022 – Feb 2026</p>
                     <p class="mb-0">Advisors: Prof Hongzhi Yin, Dr Tong Chen</p>
                 </div>
                 <!-- Bachelor -->
                 <div class="card">
                     <h3 class="text-xl font-bold mb-2">University of Queensland</h3>
-                    <p class="text-klein font-semibold mb-1">Bachelor of Information Technology (Honours)</p>
+                    <p class="text-neon font-semibold mb-1">Bachelor of Information Technology (Honours)</p>
                     <p class="text-sm text-gray-600 mb-3">Feb 2017 – Jun 2021</p>
                     <ul class="list-disc list-inside gap-2 flex flex-col">
                         <li>GPA: 6.625/7, First Class Honours</li>
@@ -117,7 +117,7 @@
                         <h3 class="text-xl font-bold">TikTok</h3>
                         <p class="text-sm text-gray-600">Sep 2025 – Feb 2026</p>
                     </div>
-                    <p class="text-klein font-semibold mb-4">Machine Learning Engineer Intern</p>
+                    <p class="text-neon font-semibold mb-4">Machine Learning Engineer Intern</p>
                     <p class="mb-0">Working to enhance the livestream recommender system at TikTok Shop.</p>
                 </div>
                 <!-- UQ Research Assistant -->
@@ -126,7 +126,7 @@
                         <h3 class="text-xl font-bold">University of Queensland</h3>
                         <p class="text-sm text-gray-600">Nov 2020 – Dec 2021</p>
                     </div>
-                    <p class="text-klein font-semibold mb-4">Research Assistant</p>
+                    <p class="text-neon font-semibold mb-4">Research Assistant</p>
                     <p class="mb-0">Applying NLP models to detect misinformation.</p>
                 </div>
             </div>
@@ -140,67 +140,67 @@
                 <div class="publication-card">
                     <h3 class="font-bold">Efficient Multimodal Streaming Recommendation via Expandable Side Mixture-of-Experts</h3>
                     <p class="text-sm mb-1">Yunke Qu, Liang Qu, Tong Chen, Quoc Viet Hung Nguyen, Hongzhi Yin</p>
-                    <p class="text-sm text-klein font-semibold mb-2">CIKM 2025 (CORE A, CCF B) <span class="mx-2">|</span> <a href="#" class="link-item text-sm">Paper</a> <span class="mx-2">|</span> <a href="#" class="link-item text-sm">Code</a></p>
+                    <p class="text-sm text-neon font-semibold mb-2">CIKM 2025 (CORE A, CCF B) <span class="mx-2">|</span> <a href="#" class="link-item text-sm">Paper</a> <span class="mx-2">|</span> <a href="#" class="link-item text-sm">Code</a></p>
                     <div class="flex flex-wrap gap-2 mb-3">
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-klein hover:text-white transition-colors duration-300 cursor-pointer">Multimodal Learning</span>
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-klein hover:text-white transition-colors duration-300 cursor-pointer">Parameter-Efficient Fine-Tuning</span>
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-klein hover:text-white transition-colors duration-300 cursor-pointer">MoE</span>
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-klein hover:text-white transition-colors duration-300 cursor-pointer">Transformers</span>
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-klein hover:text-white transition-colors duration-300 cursor-pointer">Continual Learning</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-neon hover:text-black transition-colors duration-300 cursor-pointer">Multimodal Learning</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-neon hover:text-black transition-colors duration-300 cursor-pointer">Parameter-Efficient Fine-Tuning</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-neon hover:text-black transition-colors duration-300 cursor-pointer">MoE</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-neon hover:text-black transition-colors duration-300 cursor-pointer">Transformers</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-neon hover:text-black transition-colors duration-300 cursor-pointer">Continual Learning</span>
                     </div>
                 </div>
                 <!-- SIGIR 2023 -->
                 <div class="publication-card">
                     <h3 class="font-bold">Continuous Input Embedding Size Search for Recommender Systems</h3>
                     <p class="text-sm mb-1">Yunke Qu, Tong Chen, Xiangyu Zhao, Lizhen Cui, Kai Zheng, Hongzhi Yin</p>
-                    <p class="text-sm text-klein font-semibold mb-2">SIGIR 2023 (CORE A*, CCF A) <span class="mx-2">|</span> <a href="#" class="link-item text-sm">Paper</a> <span class="mx-2">|</span> <a href="#" class="link-item text-sm">Code</a></p>
+                    <p class="text-sm text-neon font-semibold mb-2">SIGIR 2023 (CORE A*, CCF A) <span class="mx-2">|</span> <a href="#" class="link-item text-sm">Paper</a> <span class="mx-2">|</span> <a href="#" class="link-item text-sm">Code</a></p>
                     <div class="flex flex-wrap gap-2 mb-3">
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-klein hover:text-white transition-colors duration-300 cursor-pointer">Reinforcement Learning</span>
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-klein hover:text-white transition-colors duration-300 cursor-pointer">AutoML</span>
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-klein hover:text-white transition-colors duration-300 cursor-pointer">Neural Architecture Search</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-neon hover:text-black transition-colors duration-300 cursor-pointer">Reinforcement Learning</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-neon hover:text-black transition-colors duration-300 cursor-pointer">AutoML</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-neon hover:text-black transition-colors duration-300 cursor-pointer">Neural Architecture Search</span>
                     </div>
                 </div>
                 <!-- CIKM 2024 -->
                 <div class="publication-card">
                     <h3 class="font-bold">Scalable Dynamic Embedding Size Search for Streaming Recommendation</h3>
                     <p class="text-sm mb-1">Yunke Qu, Liang Qu, Tong Chen, Xiangyu Zhao, Quoc Viet Hung Nguyen, Hongzhi Yin</p>
-                    <p class="text-sm text-klein font-semibold mb-2">CIKM 2024 (CORE A, CCF B) <span class="mx-2">|</span> <a href="#" class="link-item text-sm">Paper</a> <span class="mx-2">|</span> <a href="#" class="link-item text-sm">Code</a></p>
+                    <p class="text-sm text-neon font-semibold mb-2">CIKM 2024 (CORE A, CCF B) <span class="mx-2">|</span> <a href="#" class="link-item text-sm">Paper</a> <span class="mx-2">|</span> <a href="#" class="link-item text-sm">Code</a></p>
                     <div class="flex flex-wrap gap-2 mb-3">
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-klein hover:text-white transition-colors duration-300 cursor-pointer">Reinforcement Learning</span>
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-klein hover:text-white transition-colors duration-300 cursor-pointer">AutoML</span>
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-klein hover:text-white transition-colors duration-300 cursor-pointer">Neural Architecture Search</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-neon hover:text-black transition-colors duration-300 cursor-pointer">Reinforcement Learning</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-neon hover:text-black transition-colors duration-300 cursor-pointer">AutoML</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-neon hover:text-black transition-colors duration-300 cursor-pointer">Neural Architecture Search</span>
                     </div>
                 </div>
                 <!-- WSDM 2024 -->
                 <div class="publication-card">
                     <h3 class="font-bold">Budgeted Embedding Table for Recommender Systems</h3>
                     <p class="text-sm mb-1">Yunke Qu, Tong Chen, Quoc Viet Hung Nguyen, Hongzhi Yin</p>
-                    <p class="text-sm text-klein font-semibold mb-2">WSDM 2024 (CORE A, CCF B) <span class="mx-2">|</span> <a href="#" class="link-item text-sm">Paper</a> <span class="mx-2">|</span> <a href="#" class="link-item text-sm">Code</a></p>
+                    <p class="text-sm text-neon font-semibold mb-2">WSDM 2024 (CORE A, CCF B) <span class="mx-2">|</span> <a href="#" class="link-item text-sm">Paper</a> <span class="mx-2">|</span> <a href="#" class="link-item text-sm">Code</a></p>
                     <div class="flex flex-wrap gap-2 mb-3">
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-klein hover:text-white transition-colors duration-300 cursor-pointer">Reinforcement Learning</span>
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-klein hover:text-white transition-colors duration-300 cursor-pointer">AutoML</span>
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-klein hover:text-white transition-colors duration-300 cursor-pointer">Neural Architecture Search</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-neon hover:text-black transition-colors duration-300 cursor-pointer">Reinforcement Learning</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-neon hover:text-black transition-colors duration-300 cursor-pointer">AutoML</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-neon hover:text-black transition-colors duration-300 cursor-pointer">Neural Architecture Search</span>
                     </div>
                 </div>
                 <!-- Data Science and Engineering -->
                 <div class="publication-card">
                     <h3 class="font-bold">Sparse Gradient Training for Recommender Systems</h3>
                     <p class="text-sm mb-1">Yunke Qu, Liang Qu, Tong Chen, Xiangyu Zhao, Jianxin Li, Hongzhi Yin</p>
-                    <p class="text-sm text-klein font-semibold mb-2">Data Science and Engineering (Q1, CAS Tier 1) <span class="mx-2">|</span> <a href="#" class="link-item text-sm">Paper</a> <span class="mx-2">|</span> <a href="#" class="link-item text-sm">Code</a></p>
+                    <p class="text-sm text-neon font-semibold mb-2">Data Science and Engineering (Q1, CAS Tier 1) <span class="mx-2">|</span> <a href="#" class="link-item text-sm">Paper</a> <span class="mx-2">|</span> <a href="#" class="link-item text-sm">Code</a></p>
                     <div class="flex flex-wrap gap-2 mb-3">
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-klein hover:text-white transition-colors duration-300 cursor-pointer">Parameter Pruning</span>
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-klein hover:text-white transition-colors duration-300 cursor-pointer">Model Compression</span>
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-klein hover:text-white transition-colors duration-300 cursor-pointer">Sparse Training</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-neon hover:text-black transition-colors duration-300 cursor-pointer">Parameter Pruning</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-neon hover:text-black transition-colors duration-300 cursor-pointer">Model Compression</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-neon hover:text-black transition-colors duration-300 cursor-pointer">Sparse Training</span>
                     </div>
                 </div>
                 <!-- ACM JDIQ -->
                 <div class="publication-card">
                     <h3 class="font-bold">Combining Human and Machine Confidence in Truthfulness Assessment</h3>
                     <p class="text-sm mb-1">Yunke Qu, Kevin Roitero, David La Barbera, Damiano Spina, Stefano Mizzaro, Gianluca Demartini</p>
-                    <p class="text-sm text-klein font-semibold mb-2">ACM Journal of Data and Information Quality (Q2) <span class="mx-2">|</span> <a href="#" class="link-item text-sm">Paper</a></p>
+                    <p class="text-sm text-neon font-semibold mb-2">ACM Journal of Data and Information Quality (Q2) <span class="mx-2">|</span> <a href="#" class="link-item text-sm">Paper</a></p>
                     <div class="flex flex-wrap gap-2 mb-3">
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-klein hover:text-white transition-colors duration-300 cursor-pointer">NLP</span>
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-klein hover:text-white transition-colors duration-300 cursor-pointer">Text Classification</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-neon hover:text-black transition-colors duration-300 cursor-pointer">NLP</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs hover:bg-neon hover:text-black transition-colors duration-300 cursor-pointer">Text Classification</span>
                     </div>
                 </div>
             </div>
@@ -210,9 +210,9 @@
         <section id="contact" class="mb-16">
             <h2 class="section-title">Contact</h2>
             <div class="grid md:grid-cols-2 gap-6">
-                <a href="mailto:yunke.qu@uq.net.au" class="card hover:bg-klein hover:text-white" style="transition: background-color 0.5s ease, color 0.5s ease;">
+                <a href="mailto:yunke.qu@uq.net.au" class="card hover:bg-neon hover:text-black" style="transition: background-color 0.5s ease, color 0.5s ease;">
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-klein text-white rounded-full flex items-center justify-center text-xl">
+                        <div class="w-12 h-12 bg-neon text-black rounded-full flex items-center justify-center text-xl">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
                         </div>
                         <div>
@@ -221,9 +221,9 @@
                         </div>
                     </div>
                 </a>
-                <a href="https://scholar.google.com/citations?user=oup2M48AAAAJ&hl=en" class="card hover:bg-klein hover:text-white" style="transition: background-color 0.5s ease, color 0.5s ease;" target="_blank">
+                <a href="https://scholar.google.com/citations?user=oup2M48AAAAJ&hl=en" class="card hover:bg-neon hover:text-black" style="transition: background-color 0.5s ease, color 0.5s ease;" target="_blank">
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-klein text-white rounded-full flex items-center justify-center text-xl">
+                        <div class="w-12 h-12 bg-neon text-black rounded-full flex items-center justify-center text-xl">
                             <i class="fa fa-google" aria-hidden="true"></i>
                         </div>
                         <div>
@@ -232,9 +232,9 @@
                         </div>
                     </div>
                 </a>
-                <a href="https://github.com/qykcq" class="card hover:bg-klein hover:text-white" style="transition: background-color 0.5s ease, color 0.5s ease;" target="_blank">
+                <a href="https://github.com/qykcq" class="card hover:bg-neon hover:text-black" style="transition: background-color 0.5s ease, color 0.5s ease;" target="_blank">
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-klein text-white rounded-full flex items-center justify-center text-xl">
+                        <div class="w-12 h-12 bg-neon text-black rounded-full flex items-center justify-center text-xl">
                             <i class="fa fa-github" aria-hidden="true"></i>
                         </div>
                         <div>
@@ -243,9 +243,9 @@
                         </div>
                     </div>
                 </a>
-                <a href="https://www.linkedin.com/in/ykqu/" class="card hover:bg-klein hover:text-white" style="transition: background-color 0.5s ease, color 0.5s ease;" target="_blank">
+                <a href="https://www.linkedin.com/in/ykqu/" class="card hover:bg-neon hover:text-black" style="transition: background-color 0.5s ease, color 0.5s ease;" target="_blank">
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-klein text-white rounded-full flex items-center justify-center text-xl">
+                        <div class="w-12 h-12 bg-neon text-black rounded-full flex items-center justify-center text-xl">
                             <i class="fa fa-linkedin" aria-hidden="true"></i>
                         </div>
                         <div>
@@ -264,10 +264,10 @@
         <div class="max-w-7xl mx-auto text-center">
             <p class="text-gray-600 mb-4">Yunke Qu | PhD in AI</p>
             <div class="flex justify-center gap-6 mb-6">
-                <a href="https://scholar.google.com/citations?user=oup2M48AAAAJ&hl=en" class="text-klein hover:text-kleinLight transition-colors" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
-                <a href="https://github.com/qykcq" class="text-klein hover:text-kleinLight transition-colors" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/ykqu/" class="text-klein hover:text-kleinLight transition-colors" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                <a href="mailto:yunke.qu@uq.net.au" class="text-klein hover:text-kleinLight transition-colors"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                <a href="https://scholar.google.com/citations?user=oup2M48AAAAJ&hl=en" class="text-neon hover:text-neonLight transition-colors" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
+                <a href="https://github.com/qykcq" class="text-neon hover:text-neonLight transition-colors" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/ykqu/" class="text-neon hover:text-neonLight transition-colors" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="mailto:yunke.qu@uq.net.au" class="text-neon hover:text-neonLight transition-colors"><i class="fa fa-envelope" aria-hidden="true"></i></a>
             </div>
             <div class="mb-4">
                 <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=4m8fDY1r0KBc51xL6NoifMVIqmw_Exyzzlpvkg1C57c&cl=ffffff&w=a"></script>
@@ -277,7 +277,7 @@
     </footer>
 
     <!-- 回到顶部按钮 -->
-    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-8 right-8 bg-klein text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-kleinLight transition-colors">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-8 right-8 bg-neon text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-neonLight transition-colors">
         <i class="fa fa-arrow-up" aria-hidden="true"></i>
     </button>
 </body>
