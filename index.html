@@ -161,56 +161,40 @@
     <main class="max-w-7xl mx-auto px-6 md:px-12 py-12">
         <!-- 个人信息 -->
         <section id="about" class="mb-16">
-            <div class="relative rounded-lg overflow-hidden shadow-2xl p-12">
-                <!-- Building wall background with more realistic texture -->
-                <div class="absolute inset-0 bg-[#e0e0e0]" style="background-image: linear-gradient(to right, #d0d0d0 25%, #e0e0e0 25%, #e0e0e0 50%, #d0d0d0 50%, #d0d0d0 75%, #e0e0e0 75%, #e0e0e0 100%); background-size: 40px 40px;"></div>
+            <div class="about-section rounded-lg shadow-sm p-6 md:p-10">
                 
-                <!-- Add some shadow effects to simulate outdoor lighting -->
-                <div class="absolute inset-0 bg-gradient-to-r from-transparent to-rgba(0,0,0,0.1)"></div>
-                
-                <!-- Billboard mount structure -->
-                <div class="absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/2 h-16 w-16 bg-gray-700 rounded-full shadow-lg"></div>
-                <div class="absolute left-1/2 top-0 transform -translate-x-1/2 h-8 w-2 bg-gray-700 shadow-md"></div>
-                
-                <!-- Billboard structure with slight rotation for realism -->
-                <div class="relative bg-[#002FA7] rounded-lg shadow-2xl p-8 border-8 border-gray-700 max-w-4xl mx-auto mt-8 mb-8 transform rotate-1">
-                    <!-- Billboard content -->
-                    <div class="text-center">
-                        <h2 class="text-5xl md:text-6xl font-bold mb-4">Yunke Qu</h2>
-                        <p class="text-xl mb-8" data-lang-key="phd-title">PhD in Artificial Intelligence | University of Queensland</p>
-                        
-                        <hr class="border-white border-t-2 my-6">
-                        
-                        <div class="mb-8 text-left">
-                            <h3 class="text-xl font-semibold mb-3" data-lang-key="research-focus">Research Focus:</h3>
-                            <p class="text-lg">Recommender Systems · Multimodal Learning · Parameter-Efficient Finetuning · Model Compression</p>
+                <div class="relative z-10">
+                    <h2 class="text-5xl md:text-6xl font-bold mb-4">Yunke Qu</h2>
+                    <p class="text-xl mb-8" data-lang-key="phd-title">PhD in Artificial Intelligence | University of Queensland</p>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold mb-3" data-lang-key="research-focus">Research Focus:</h3>
+                        <p class="text-lg">Recommender Systems · Multimodal Learning · Parameter-Efficient Finetuning · Model Compression</p>
+                    </div>
+                    
+                    <hr class="border-white border-t-2 my-8">
+                    
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                        <div class="flex items-center mb-4 md:mb-0">
+                            <i class="fa fa-envelope mr-3"></i>
+                            <p class="text-lg">Email: yunke.qu@uq.edu.au</p>
                         </div>
-                        
-                        <hr class="border-white border-t-2 my-6">
-                        
-                        <div class="flex flex-col md:flex-row justify-center items-center gap-6">
-                            <a href="mailto:yunke.qu@uq.edu.au" class="flex items-center text-white hover:text-gray-200 transition-colors" title="Email">
-                                <i class="fa fa-envelope mr-2 text-2xl"></i>
-                            </a>
+                        <div class="flex gap-6">
                             <a href="https://github.com/qykcq" class="flex items-center text-white hover:text-gray-200 transition-colors" title="GitHub" target="_blank">
-                                <i class="fa fa-github mr-2 text-2xl"></i>
+                                <i class="fa fa-github mr-2"></i>
+                                <span>GitHub</span>
                             </a>
                             <a href="https://scholar.google.com/citations?user=oup2M48AAAAJ&hl=en" class="flex items-center text-white hover:text-gray-200 transition-colors" title="Google Scholar" target="_blank">
-                                <i class="fa fa-google mr-2 text-2xl"></i>
+                                <i class="fa fa-google mr-2"></i>
+                                <span>Google Scholar</span>
                             </a>
                             <a href="https://www.linkedin.com/in/ykqu/" class="flex items-center text-white hover:text-gray-200 transition-colors" title="LinkedIn" target="_blank">
-                                <i class="fa fa-linkedin mr-2 text-2xl"></i>
+                                <i class="fa fa-linkedin mr-2"></i>
+                                <span>LinkedIn</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Billboard base support -->
-                <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 h-16 w-4 bg-gray-700 shadow-md"></div>
-                <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-1/2 h-8 w-24 bg-gray-700 rounded-full shadow-lg"></div>
-                
-                <!-- Add some ground shadow -->
-                <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-1/2 h-4 w-96 bg-gray-500 rounded-full opacity-30"></div>
             </div>
         </section>
 
