@@ -6,6 +6,7 @@
     <title>Yunke Qu - Personal Homepage</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <script>
         // Tailwind 配置
         tailwind.config = {
@@ -19,6 +20,7 @@
                     },
                     fontFamily: {
                         sans: ['Arial', 'Helvetica', 'sans-serif'],
+                        display: ['Anton', 'sans-serif'],
                     },
                 }
             }
@@ -40,6 +42,9 @@
             }
             .publication-card {
                 @apply border-l-4 border-neon pl-4 py-2 mb-4 hover:bg-grayLight rounded-r transition-colors duration-300;
+            }
+            .font-display {
+                font-family: 'Anton', sans-serif;
             }
         }
         html {
@@ -70,7 +75,7 @@
         <!-- 个人信息 -->
         <section id="about" class="mb-16">
             <div class="bg-neon text-black rounded-lg shadow-sm p-6 md:p-8 flex flex-col items-center justify-center text-center">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">YUNKE QU</h2>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 font-display">YUNKE QU</h2>
                 <p class="text-lg mb-6">PhD in Artificial Intelligence | University of Queensland</p>
                 <p class="text-sm text-gray-800 max-w-2xl">Research Focus: Recommender Systems, Multimodal Learning, Parameter-Efficient Finetuning, Model Compression, AutoML, Reinforcement Learning</p>
             </div>
