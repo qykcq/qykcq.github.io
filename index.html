@@ -94,13 +94,17 @@
         
         .link-item {
             color: #002FA7;
-            text-decoration: underline;
-            text-underline-offset: 4px;
-            transition: color 0.3s ease;
+            text-decoration: none;
+            border-bottom: 1px solid #002FA7;
+            padding-bottom: 1px;
+            transition: all 0.3s ease;
         }
         
         .link-item:hover {
-            color: #0047AB;
+            color: white;
+            background-color: #002FA7;
+            padding: 0.125rem 0.25rem;
+            border-radius: 4px;
         }
         
         .publication-card {
@@ -117,11 +121,13 @@
         }
         
         .keyword-tag {
-            background-color: #F3F4F6;
+            background-color: rgba(0, 47, 167, 0.1);
+            color: #002FA7;
             padding: 0.25rem 0.75rem;
             border-radius: 9999px;
             font-size: 0.75rem;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            border: 1px solid #002FA7;
+            transition: all 0.3s ease;
             cursor: pointer;
         }
         
@@ -149,12 +155,13 @@
         }
         
         .dark .publication-card:hover {
-            background-color: #1F2937;
+            background-color: rgba(142, 215, 22, 0.1);
         }
         
         .dark .keyword-tag {
-            background-color: rgba(0, 0, 0, 0.2);
+            background-color: rgba(142, 215, 22, 0.1);
             border: 1px solid #8ed716;
+            color: #8ed716;
         }
         
         .dark .keyword-tag:hover {
@@ -197,38 +204,55 @@
         
         /* Research tags */
         .research-tag {
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(0, 47, 167, 0.1);
+            color: #002FA7;
             padding: 0.5rem 1rem;
             border-radius: 9999px;
             font-size: 0.875rem;
+            border: 1px solid #002FA7;
+            transition: all 0.3s ease;
+        }
+        
+        .research-tag:hover {
+            background-color: #002FA7;
+            color: white;
         }
         
         .dark .research-tag {
-            background-color: rgba(0, 0, 0, 0.2);
+            background-color: rgba(142, 215, 22, 0.1);
             border: 1px solid #8ed716;
             color: #8ed716;
         }
         
+        .dark .research-tag:hover {
+            background-color: #8ed716;
+            color: black;
+        }
+        
         /* Contact icons */
         .contact-icon {
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(0, 47, 167, 0.1);
+            color: #002FA7;
             padding: 0.75rem;
             border-radius: 9999px;
-            transition: background-color 0.3s ease;
+            border: 1px solid #002FA7;
+            transition: all 0.3s ease;
         }
         
         .contact-icon:hover {
-            background-color: rgba(255, 255, 255, 0.3);
+            background-color: #002FA7;
+            color: white;
         }
         
         .dark .contact-icon {
-            background-color: rgba(0, 0, 0, 0.2);
+            background-color: rgba(142, 215, 22, 0.1);
             border: 1px solid #8ed716;
             color: #8ed716;
         }
         
         .dark .contact-icon:hover {
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: #8ed716;
+            color: black;
         }
     </style>
 </head>
@@ -237,13 +261,13 @@
     <nav class="sticky top-0 bg-white shadow-sm z-50 py-4 px-6 md:px-12">
         <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center">
             <h1 class="text-xl md:text-2xl font-bold text-klein">Yunke Qu</h1>
-            <div class="flex gap-6 mt-4 md:mt-0">
-                <a href="#about" class="hover:text-klein transition-colors" data-lang-key="about">About</a>
-                <a href="#education" class="hover:text-klein transition-colors" data-lang-key="education">Education</a>
-                <a href="#experience" class="hover:text-klein transition-colors" data-lang-key="experience">Experience</a>
-                <a href="#publications" class="hover:text-klein transition-colors" data-lang-key="publications">Publications</a>
-                <button id="lang-toggle" class="hover:text-klein transition-colors">中文</button>
-                <button id="dark-mode-toggle" class="hover:text-klein transition-colors">
+            <div class="flex gap-4 mt-4 md:mt-0">
+                <a href="#about" class="text-[#002FA7] dark:text-[#8ed716] hover:bg-[#002FA7] hover:text-white dark:hover:bg-[#8ed716] dark:hover:text-black px-3 py-1 rounded transition-all" data-lang-key="about">About</a>
+                <a href="#education" class="text-[#002FA7] dark:text-[#8ed716] hover:bg-[#002FA7] hover:text-white dark:hover:bg-[#8ed716] dark:hover:text-black px-3 py-1 rounded transition-all" data-lang-key="education">Education</a>
+                <a href="#experience" class="text-[#002FA7] dark:text-[#8ed716] hover:bg-[#002FA7] hover:text-white dark:hover:bg-[#8ed716] dark:hover:text-black px-3 py-1 rounded transition-all" data-lang-key="experience">Experience</a>
+                <a href="#publications" class="text-[#002FA7] dark:text-[#8ed716] hover:bg-[#002FA7] hover:text-white dark:hover:bg-[#8ed716] dark:hover:text-black px-3 py-1 rounded transition-all" data-lang-key="publications">Publications</a>
+                <button id="lang-toggle" class="text-[#002FA7] dark:text-[#8ed716] hover:bg-[#002FA7] hover:text-white dark:hover:bg-[#8ed716] dark:hover:text-black px-3 py-1 rounded transition-all">中文</button>
+                <button id="dark-mode-toggle" class="text-[#002FA7] dark:text-[#8ed716] hover:bg-[#002FA7] hover:text-white dark:hover:bg-[#8ed716] dark:hover:text-black px-3 py-1 rounded transition-all">
                     <i class="fa fa-moon-o"></i>
                 </button>
             </div>
@@ -433,7 +457,7 @@
     </footer>
 
     <!-- 回到顶部按钮 -->
-    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-8 right-8 bg-[#002FA7] text-white dark:bg-[#8ed716] dark:border dark:border-black dark:text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-[#0047AB] dark:hover:bg-[#a8e649] transition-colors">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-8 right-8 bg-white text-[#002FA7] border border-[#002FA7] dark:bg-[#e3e3e5] dark:border-[#8ed716] dark:text-[#8ed716] w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-[#002FA7] hover:text-white dark:hover:bg-[#8ed716] dark:hover:text-black transition-all">
         <i class="fa fa-arrow-up" aria-hidden="true"></i>
     </button>
 
