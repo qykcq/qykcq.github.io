@@ -26,17 +26,6 @@
             --accent-light: #0047AB;
         }
         
-        .dark {
-            --bg-color: #000000;
-            --text-color: #8ed716;
-            --card-bg: #000000;
-            --card-border: #8ed716;
-            --footer-bg: #000000;
-            --footer-text: #8ed716;
-            --accent-color: #8ed716;
-            --accent-light: #a9e64c;
-        }
-        
         html {
             scroll-behavior: smooth;
         }
@@ -119,38 +108,6 @@
             color: white;
         }
         
-        /* Dark mode styles */
-        .dark .section-title {
-            color: #8ed716;
-            border-bottom-color: #8ed716;
-        }
-        
-        .dark .link-item {
-            color: #8ed716;
-        }
-        
-        .dark .link-item:hover {
-            color: #a9e64c;
-        }
-        
-        .dark .publication-card {
-            border-left-color: #8ed716;
-        }
-        
-        .dark .publication-card:hover {
-            background-color: #1F2937;
-        }
-        
-        .dark .keyword-tag {
-            background-color: #000000;
-            border: 1px solid #8ed716;
-        }
-        
-        .dark .keyword-tag:hover {
-            background-color: #8ed716;
-            color: #000000;
-        }
-        
         /* About section styles */
         .about-section {
             background-color: #002FA7;
@@ -158,31 +115,7 @@
             border: 1px solid transparent;
         }
         
-        .dark .about-section {
-            background-color: #000000;
-            color: #8ed716;
-            border: 1px solid #8ed716;
-        }
-        
-        /* Navigation bar dark mode */
-        .dark nav {
-            background-color: #000000;
-            border-bottom: 1px solid #8ed716;
-        }
-        
-        .dark nav h1 {
-            color: #8ed716;
-        }
-        
-        .dark nav a,
-        .dark nav button {
-            color: #8ed716;
-        }
-        
-        .dark nav a:hover,
-        .dark nav button:hover {
-            color: #a9e64c;
-        }
+
         
         /* Research tags */
         .research-tag {
@@ -190,12 +123,6 @@
             padding: 0.5rem 1rem;
             border-radius: 9999px;
             font-size: 0.875rem;
-        }
-        
-        .dark .research-tag {
-            background-color: #000000;
-            border: 1px solid #8ed716;
-            color: #8ed716;
         }
         
         /* Contact icons */
@@ -210,14 +137,9 @@
             background-color: rgba(255, 255, 255, 0.3);
         }
         
-        .dark .contact-icon {
-            background-color: #000000;
-            border: 1px solid #8ed716;
-            color: #8ed716;
-        }
-        
-        .dark .contact-icon:hover {
-            background-color: rgba(255, 255, 255, 0.1);
+        /* Back to top button */
+        #back-to-top {
+            transition: all 0.3s ease;
         }
     </style>
 </head>
@@ -232,9 +154,6 @@
                 <a href="#experience" class="hover:text-klein transition-colors" data-lang-key="experience">Experience</a>
                 <a href="#publications" class="hover:text-klein transition-colors" data-lang-key="publications">Publications</a>
                 <button id="lang-toggle" class="hover:text-klein transition-colors">中文</button>
-                <button id="dark-mode-toggle" class="hover:text-klein transition-colors">
-                    <i class="fa fa-moon-o"></i>
-                </button>
             </div>
         </div>
     </nav>
@@ -422,7 +341,7 @@
     </footer>
 
     <!-- 回到顶部按钮 -->
-    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-8 right-8 bg-[#002FA7] text-white dark:bg-black dark:border dark:border-[#8ed716] dark:text-[#8ed716] w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-[#0047AB] dark:hover:bg-grayLight transition-colors">
+    <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-8 right-8 bg-[#002FA7] text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-[#0047AB] transition-colors">
         <i class="fa fa-arrow-up" aria-hidden="true"></i>
     </button>
 
@@ -501,27 +420,7 @@
         // Add event listener to language toggle button
         document.getElementById('lang-toggle').addEventListener('click', toggleLanguage);
 
-        // Dark mode toggle
-        const darkModeToggle = document.getElementById('dark-mode-toggle');
-        const htmlElement = document.documentElement;
 
-        // Check for saved dark mode preference or system preference
-        if (localStorage.getItem('darkMode') === 'true' || 
-            (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            htmlElement.classList.add('dark');
-            darkModeToggle.innerHTML = '<i class="fa fa-sun-o"></i>';
-        }
-
-        // Dark mode toggle function
-        function toggleDarkMode() {
-            htmlElement.classList.toggle('dark');
-            const isDark = htmlElement.classList.contains('dark');
-            localStorage.setItem('darkMode', isDark);
-            darkModeToggle.innerHTML = isDark ? '<i class="fa fa-sun-o"></i>' : '<i class="fa fa-moon-o"></i>';
-        }
-
-        // Add event listener to dark mode toggle button
-        darkModeToggle.addEventListener('click', toggleDarkMode);
     </script>
 </body>
 </html>
