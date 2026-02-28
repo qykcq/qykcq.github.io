@@ -57,10 +57,11 @@
         <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center">
             <h1 class="text-xl md:text-2xl font-bold text-klein">Yunke Qu</h1>
             <div class="flex gap-6 mt-4 md:mt-0">
-                <a href="#about" class="hover:text-klein transition-colors">About</a>
-                <a href="#education" class="hover:text-klein transition-colors">Education</a>
-                <a href="#experience" class="hover:text-klein transition-colors">Experience</a>
-                <a href="#publications" class="hover:text-klein transition-colors">Publications</a>
+                <a href="#about" class="hover:text-klein transition-colors" data-lang-key="about">About</a>
+                <a href="#education" class="hover:text-klein transition-colors" data-lang-key="education">Education</a>
+                <a href="#experience" class="hover:text-klein transition-colors" data-lang-key="experience">Experience</a>
+                <a href="#publications" class="hover:text-klein transition-colors" data-lang-key="publications">Publications</a>
+                <button id="lang-toggle" class="hover:text-klein transition-colors">中文</button>
             </div>
         </div>
     </nav>
@@ -72,15 +73,15 @@
                 
                 <div class="relative z-10">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Yunke Qu</h2>
-                    <p class="text-lg mb-6">PhD in Artificial Intelligence | University of Queensland</p>
+                    <p class="text-lg mb-6" data-lang-key="phd-title">PhD in Artificial Intelligence | University of Queensland</p>
                     
                     <div class="mb-6">
-                        <h3 class="text-xl font-semibold mb-3">Research Focus</h3>
+                        <h3 class="text-xl font-semibold mb-3" data-lang-key="research-focus">Research Focus</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-white/20 px-4 py-2 rounded-full text-sm">Recommender Systems</span>
-                            <span class="bg-white/20 px-4 py-2 rounded-full text-sm">Multimodal Learning</span>
-                            <span class="bg-white/20 px-4 py-2 rounded-full text-sm">Parameter-Efficient Finetuning</span>
-                            <span class="bg-white/20 px-4 py-2 rounded-full text-sm">Model Compression</span>
+                            <span class="bg-white/20 px-4 py-2 rounded-full text-sm" data-lang-key="recommender-systems">Recommender Systems</span>
+                            <span class="bg-white/20 px-4 py-2 rounded-full text-sm" data-lang-key="multimodal-learning">Multimodal Learning</span>
+                            <span class="bg-white/20 px-4 py-2 rounded-full text-sm" data-lang-key="parameter-efficient">Parameter-Efficient Finetuning</span>
+                            <span class="bg-white/20 px-4 py-2 rounded-full text-sm" data-lang-key="model-compression">Model Compression</span>
                         </div>
                     </div>
                     
@@ -106,22 +107,22 @@
 
         <!-- 教育背景 -->
         <section id="education" class="mb-16">
-            <h2 class="section-title">Education</h2>
+            <h2 class="section-title" data-lang-key="education">Education</h2>
             <div class="grid md:grid-cols-2 gap-6">
                 <!-- PhD -->
                 <div class="card">
                     <h3 class="text-xl font-bold mb-2">University of Queensland</h3>
-                    <p class="text-klein font-semibold mb-1">PhD in Artificial Intelligence</p>
+                    <p class="text-klein font-semibold mb-1" data-lang-key="phd-degree">PhD in Artificial Intelligence</p>
                     <p class="text-sm text-gray-600 mb-3">Apr 2022 – Feb 2026</p>
-                    <p class="mb-0">Advisors: Prof Hongzhi Yin, Dr Tong Chen</p>
+                    <p class="mb-0" data-lang-key="advisors">Advisors: Prof Hongzhi Yin, Dr Tong Chen</p>
                 </div>
                 <!-- Bachelor -->
                 <div class="card">
                     <h3 class="text-xl font-bold mb-2">University of Queensland</h3>
-                    <p class="text-klein font-semibold mb-1">Bachelor of Information Technology (Honours)</p>
+                    <p class="text-klein font-semibold mb-1" data-lang-key="bachelor-degree">Bachelor of Information Technology (Honours)</p>
                     <p class="text-sm text-gray-600 mb-3">Feb 2017 – Jun 2021</p>
                     <ul class="list-disc list-inside gap-2 flex flex-col">
-                        <li>GPA: 6.625/7, First Class Honours</li>
+                        <li data-lang-key="gpa">GPA: 6.625/7, First Class Honours</li>
                     </ul>
                 </div>
             </div>
@@ -129,7 +130,7 @@
 
         <!-- 工作/研究经历 -->
         <section id="experience" class="mb-16">
-            <h2 class="section-title">Professional Experience</h2>
+            <h2 class="section-title" data-lang-key="professional-experience">Professional Experience</h2>
             <div class="grid md:grid-cols-1 gap-6">
                 <!-- TikTok Intern -->
                 <div class="card">
@@ -137,8 +138,8 @@
                         <h3 class="text-xl font-bold">TikTok</h3>
                         <p class="text-sm text-gray-600">Sep 2025 – Feb 2026</p>
                     </div>
-                    <p class="text-klein font-semibold mb-4">Machine Learning Engineer Intern</p>
-                    <p class="mb-0">Working to enhance the livestream recommender system at TikTok Shop.</p>
+                    <p class="text-klein font-semibold mb-4" data-lang-key="ml-engineer">Machine Learning Engineer Intern</p>
+                    <p class="mb-0" data-lang-key="tiktok-desc">Working to enhance the livestream recommender system at TikTok Shop.</p>
                 </div>
                 <!-- UQ Research Assistant -->
                 <div class="card">
@@ -146,15 +147,15 @@
                         <h3 class="text-xl font-bold">University of Queensland</h3>
                         <p class="text-sm text-gray-600">Nov 2020 – Dec 2021</p>
                     </div>
-                    <p class="text-klein font-semibold mb-4">Research Assistant</p>
-                    <p class="mb-0">Applying NLP models to detect misinformation.</p>
+                    <p class="text-klein font-semibold mb-4" data-lang-key="research-assistant">Research Assistant</p>
+                    <p class="mb-0" data-lang-key="research-desc">Applying NLP models to detect misinformation.</p>
                 </div>
             </div>
         </section>
 
         <!-- 发表论文 -->
         <section id="publications" class="mb-16">
-            <h2 class="section-title">Selected Publications</h2>
+            <h2 class="section-title" data-lang-key="selected-publications">Selected Publications</h2>
             <div class="flex flex-col gap-2">
                 <!-- CIKM 2025 -->
                 <div class="publication-card">
@@ -251,5 +252,81 @@
     <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-8 right-8 bg-klein text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-kleinLight transition-colors">
         <i class="fa fa-arrow-up" aria-hidden="true"></i>
     </button>
+
+    <script>
+        // Language translation
+        const translations = {
+            en: {
+                about: 'About',
+                education: 'Education',
+                experience: 'Experience',
+                publications: 'Publications',
+                'phd-title': 'PhD in Artificial Intelligence | University of Queensland',
+                'research-focus': 'Research Focus',
+                'recommender-systems': 'Recommender Systems',
+                'multimodal-learning': 'Multimodal Learning',
+                'parameter-efficient': 'Parameter-Efficient Finetuning',
+                'model-compression': 'Model Compression',
+                'professional-experience': 'Professional Experience',
+                'ml-engineer': 'Machine Learning Engineer Intern',
+                'tiktok-desc': 'Working to enhance the livestream recommender system at TikTok Shop.',
+                'research-assistant': 'Research Assistant',
+                'research-desc': 'Applying NLP models to detect misinformation.',
+                'selected-publications': 'Selected Publications',
+                'phd-degree': 'PhD in Artificial Intelligence',
+                'advisors': 'Advisors: Prof Hongzhi Yin, Dr Tong Chen',
+                'bachelor-degree': 'Bachelor of Information Technology (Honours)',
+                'gpa': 'GPA: 6.625/7, First Class Honours'
+            },
+            zh: {
+                about: '关于',
+                education: '教育背景',
+                experience: '工作经历',
+                publications: '发表论文',
+                'phd-title': '人工智能博士 | 昆士兰大学',
+                'research-focus': '研究方向',
+                'recommender-systems': '推荐系统',
+                'multimodal-learning': '多模态学习',
+                'parameter-efficient': '参数高效微调',
+                'model-compression': '模型压缩',
+                'professional-experience': '工作经历',
+                'ml-engineer': '机器学习工程师实习生',
+                'tiktok-desc': '致力于优化TikTok Shop的直播推荐系统。',
+                'research-assistant': '研究助理',
+                'research-desc': '应用NLP模型检测虚假信息。',
+                'selected-publications': '代表性论文',
+                'phd-degree': '人工智能博士',
+                'advisors': '导师：Hongzhi Yin教授, Tong Chen博士',
+                'bachelor-degree': '信息技术学士（荣誉）',
+                'gpa': 'GPA：6.625/7，一等荣誉学位'
+            }
+        };
+
+        // Current language
+        let currentLang = 'en';
+
+        // Language toggle function
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'zh' : 'en';
+            updateLanguage();
+        }
+
+        // Update language function
+        function updateLanguage() {
+            // Update all elements with data-lang-key attribute
+            document.querySelectorAll('[data-lang-key]').forEach(element => {
+                const key = element.getAttribute('data-lang-key');
+                if (translations[currentLang][key]) {
+                    element.textContent = translations[currentLang][key];
+                }
+            });
+
+            // Update language toggle button
+            document.getElementById('lang-toggle').textContent = currentLang === 'en' ? '中文' : 'English';
+        }
+
+        // Add event listener to language toggle button
+        document.getElementById('lang-toggle').addEventListener('click', toggleLanguage);
+    </script>
 </body>
 </html>
