@@ -18,7 +18,7 @@
                         grayDark: '#333647', // 深灰文字
                     },
                     fontFamily: {
-                        sans: ['Impact', 'Haettenschweiler', 'Arial Narrow Bold', 'sans-serif'],
+                        sans: ['Arial', 'Helvetica', 'sans-serif'],
                     },
                 }
             }
@@ -27,7 +27,7 @@
     <style type="text/tailwindcss">
         @layer utilities {
             .section-title {
-                @apply text-2xl md:text-3xl font-bold text-neon border-b-2 border-neon pb-2 mb-6;
+                @apply text-2xl md:text-3xl font-bold text-neon border-b-2 border-neon pb-2 mb-6 uppercase;
             }
             .card {
                 @apply bg-white rounded-lg shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow duration-300;
