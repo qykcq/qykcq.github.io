@@ -113,6 +113,27 @@
             background-color: #002FA7;
             color: white;
             border: 1px solid transparent;
+            transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease;
+            box-shadow: 
+                0 10px 30px rgba(0, 0, 0, 0.3),
+                0 1px 3px rgba(0, 0, 0, 0.2),
+                inset 0 0 30px rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+        
+        .about-section::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: inherit;
+            z-index: -1;
+            transform: translateZ(-1px);
         }
         
 
