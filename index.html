@@ -7,48 +7,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-        // Tailwind 配置
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        klein: '#002FA7', // 克莱因蓝主色
-                        kleinLight: '#0047AB', // 克莱因蓝浅色调（悬停）
-                        matrixGreen: '#00FF41', // Matrix green
-                        matrixGreenLight: '#33FF71', // Matrix green light
-                        grayLight: '#F5F7FA', // 浅灰背景
-                        grayDark: '#333647', // 深灰文字
-                        accent: '#002FA7', // 强调色（白天模式）
-                        accentLight: '#0047AB', // 强调色浅色调（白天模式）
-                    },
-                    fontFamily: {
-                        sans: ['Orbitron', 'Courier New', 'monospace'], // Retro sci-fi font
-                    },
-                }
-            }
-        }
-    </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .section-title {
-                @apply text-2xl md:text-3xl font-bold text-klein border-b-2 border-klein pb-2 mb-6;
-            }
-            .card {
-                @apply bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 p-6 hover:shadow-md transition-shadow duration-300;
-            }
-            .link-item {
-                @apply text-klein hover:text-kleinLight underline underline-offset-4 transition-colors duration-300;
-            }
-            .icon-text {
-                @apply flex items-center gap-2 text-grayDark dark:text-gray-200;
-            }
-            .publication-card {
-                @apply border-l-4 border-klein dark:border-matrixGreen pl-4 py-2 mb-4 hover:bg-grayLight dark:hover:bg-gray-800 rounded-r transition-colors duration-300;
-            }
-            .keyword-tag {
-                @apply bg-gray-100 dark:bg-black dark:border dark:border-matrixGreen px-3 py-1 rounded-full text-xs hover:bg-klein hover:text-white dark:hover:bg-matrixGreen dark:hover:text-black transition-colors duration-300 cursor-pointer;
-        }
+    <style>
+        /* Tailwind CSS CDN */
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+        
+        /* Custom styles */
         :root {
             --bg-color: #FFFFFF;
             --text-color: #333647;
@@ -79,6 +44,7 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             transition: background-color 0.3s ease, color 0.3s ease;
+            font-family: 'Orbitron', 'Courier New', monospace;
         }
         
         nav {
@@ -92,11 +58,96 @@
             transition: background-color 0.3s ease, color 0.3s ease;
         }
         
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #002FA7;
+            border-bottom: 2px solid #002FA7;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
         .card {
             background-color: var(--card-bg);
-            border-color: var(--card-border);
-            color: var(--text-color);
-            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+            border: 1px solid var(--card-border);
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            transition: box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .card:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .link-item {
+            color: #002FA7;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            transition: color 0.3s ease;
+        }
+        
+        .link-item:hover {
+            color: #0047AB;
+        }
+        
+        .publication-card {
+            border-left: 4px solid #002FA7;
+            padding-left: 1rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .publication-card:hover {
+            background-color: #F5F7FA;
+        }
+        
+        .keyword-tag {
+            background-color: #F3F4F6;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .keyword-tag:hover {
+            background-color: #002FA7;
+            color: white;
+        }
+        
+        /* Dark mode styles */
+        .dark .section-title {
+            color: #00FF41;
+            border-bottom-color: #00FF41;
+        }
+        
+        .dark .link-item {
+            color: #00FF41;
+        }
+        
+        .dark .link-item:hover {
+            color: #33FF71;
+        }
+        
+        .dark .publication-card {
+            border-left-color: #00FF41;
+        }
+        
+        .dark .publication-card:hover {
+            background-color: #1F2937;
+        }
+        
+        .dark .keyword-tag {
+            background-color: #000000;
+            border: 1px solid #00FF41;
+        }
+        
+        .dark .keyword-tag:hover {
+            background-color: #00FF41;
+            color: #000000;
         }
     </style>
 </head>
@@ -121,7 +172,7 @@
     <main class="max-w-7xl mx-auto px-6 md:px-12 py-12">
         <!-- 个人信息 -->
         <section id="about" class="mb-16">
-            <div class="bg-klein text-white dark:bg-black dark:border dark:border-matrixGreen dark:text-matrixGreen rounded-lg shadow-sm p-6 md:p-10">
+            <div class="bg-[#002FA7] text-white dark:bg-[#00FF41] dark:border dark:border-black dark:text-black rounded-lg shadow-sm p-6 md:p-10">
                 
                 <div class="relative z-10">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Yunke Qu</h2>
@@ -130,25 +181,25 @@
                     <div class="mb-6">
                         <h3 class="text-xl font-semibold mb-3" data-lang-key="research-focus">Research Focus</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-white/20 dark:bg-black dark:border dark:border-matrixGreen px-4 py-2 rounded-full text-sm" data-lang-key="recommender-systems">Recommender Systems</span>
-                            <span class="bg-white/20 dark:bg-black dark:border dark:border-matrixGreen px-4 py-2 rounded-full text-sm" data-lang-key="multimodal-learning">Multimodal Learning</span>
-                            <span class="bg-white/20 dark:bg-black dark:border dark:border-matrixGreen px-4 py-2 rounded-full text-sm" data-lang-key="parameter-efficient">Parameter-Efficient Finetuning</span>
-                            <span class="bg-white/20 dark:bg-black dark:border dark:border-matrixGreen px-4 py-2 rounded-full text-sm" data-lang-key="model-compression">Model Compression</span>
+                            <span class="bg-white/20 dark:bg-black dark:border dark:border-black dark:text-[#00FF41] px-4 py-2 rounded-full text-sm" data-lang-key="recommender-systems">Recommender Systems</span>
+                            <span class="bg-white/20 dark:bg-black dark:border dark:border-black dark:text-[#00FF41] px-4 py-2 rounded-full text-sm" data-lang-key="multimodal-learning">Multimodal Learning</span>
+                            <span class="bg-white/20 dark:bg-black dark:border dark:border-black dark:text-[#00FF41] px-4 py-2 rounded-full text-sm" data-lang-key="parameter-efficient">Parameter-Efficient Finetuning</span>
+                            <span class="bg-white/20 dark:bg-black dark:border dark:border-black dark:text-[#00FF41] px-4 py-2 rounded-full text-sm" data-lang-key="model-compression">Model Compression</span>
                         </div>
                     </div>
                     
                     <div class="mt-6">
                         <div class="flex gap-4">
-                            <a href="mailto:yunke.qu@uq.net.au" class="bg-white/20 dark:bg-black dark:border dark:border-matrixGreen p-3 rounded-full hover:bg-white/30 dark:hover:bg-grayLight transition-colors" title="Email">
+                            <a href="mailto:yunke.qu@uq.net.au" class="bg-white/20 dark:bg-black dark:border dark:border-black dark:text-[#00FF41] p-3 rounded-full hover:bg-white/30 dark:hover:bg-grayLight transition-colors" title="Email">
                                 <i class="fa fa-envelope"></i>
                             </a>
-                            <a href="https://scholar.google.com/citations?user=oup2M48AAAAJ&hl=en" class="bg-white/20 dark:bg-black dark:border dark:border-matrixGreen p-3 rounded-full hover:bg-white/30 dark:hover:bg-grayLight transition-colors" title="Google Scholar" target="_blank">
+                            <a href="https://scholar.google.com/citations?user=oup2M48AAAAJ&hl=en" class="bg-white/20 dark:bg-black dark:border dark:border-black dark:text-[#00FF41] p-3 rounded-full hover:bg-white/30 dark:hover:bg-grayLight transition-colors" title="Google Scholar" target="_blank">
                                 <i class="fa fa-google"></i>
                             </a>
-                            <a href="https://github.com/qykcq" class="bg-white/20 dark:bg-black dark:border dark:border-matrixGreen p-3 rounded-full hover:bg-white/30 dark:hover:bg-grayLight transition-colors" title="GitHub" target="_blank">
+                            <a href="https://github.com/qykcq" class="bg-white/20 dark:bg-black dark:border dark:border-black dark:text-[#00FF41] p-3 rounded-full hover:bg-white/30 dark:hover:bg-grayLight transition-colors" title="GitHub" target="_blank">
                                 <i class="fa fa-github"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/ykqu/" class="bg-white/20 dark:bg-black dark:border dark:border-matrixGreen p-3 rounded-full hover:bg-white/30 dark:hover:bg-grayLight transition-colors" title="LinkedIn" target="_blank">
+                            <a href="https://www.linkedin.com/in/ykqu/" class="bg-white/20 dark:bg-black dark:border dark:border-black dark:text-[#00FF41] p-3 rounded-full hover:bg-white/30 dark:hover:bg-grayLight transition-colors" title="LinkedIn" target="_blank">
                                 <i class="fa fa-linkedin"></i>
                             </a>
                         </div>
@@ -301,7 +352,7 @@
     </footer>
 
     <!-- 回到顶部按钮 -->
-    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-8 right-8 bg-klein text-white dark:bg-black dark:border dark:border-matrixGreen dark:text-matrixGreen w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-kleinLight dark:hover:bg-grayLight transition-colors">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-8 right-8 bg-[#002FA7] text-white dark:bg-black dark:border dark:border-[#00FF41] dark:text-[#00FF41] w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-[#0047AB] dark:hover:bg-grayLight transition-colors">
         <i class="fa fa-arrow-up" aria-hidden="true"></i>
     </button>
 
