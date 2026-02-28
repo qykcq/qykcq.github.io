@@ -6,7 +6,7 @@
     <title>Yunke Qu - Personal Homepage</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Anton&display=swap" rel="stylesheet">
     <style>
         /* Tailwind CSS CDN */
         @tailwind base;
@@ -27,13 +27,13 @@
         
         .dark {
             --bg-color: #e3e3e5;
-            --text-color: #8ed716;
+            --text-color: #000000;
             --card-bg: #e3e3e5;
-            --card-border: #8ed716;
+            --card-border: #FFFF00;
             --footer-bg: #e3e3e5;
-            --footer-text: #8ed716;
-            --accent-color: #8ed716;
-            --accent-light: #a8e649;
+            --footer-text: #000000;
+            --accent-color: #FFFF00;
+            --accent-light: #FFFF33;
         }
         
         html {
@@ -44,19 +44,11 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             transition: background-color 0.3s ease, color 0.3s ease;
-            font-family: 'Roboto', system-ui, sans-serif;
-        }
-        
-        h1, h2, h3, .section-title {
-            font-family: 'Roboto Condensed', system-ui, sans-serif;
+            font-family: 'Inter', system-ui, sans-serif;
         }
         
         .dark body {
-            font-family: 'Roboto', system-ui, sans-serif;
-        }
-        
-        .dark h1, .dark h2, .dark h3, .dark .section-title {
-            font-family: 'Roboto Condensed', system-ui, sans-serif;
+            font-family: 'Anton', sans-serif;
         }
         
         nav {
@@ -68,6 +60,18 @@
             background-color: var(--footer-bg);
             color: var(--footer-text);
             transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .dark footer {
+            border-top: 2px solid #FFFF00;
+        }
+        
+        .dark footer a {
+            color: #000000;
+        }
+        
+        .dark footer a:hover {
+            color: #333333;
         }
         
         .section-title {
@@ -94,17 +98,13 @@
         
         .link-item {
             color: #002FA7;
-            text-decoration: none;
-            border-bottom: 1px solid #002FA7;
-            padding-bottom: 1px;
-            transition: all 0.3s ease;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            transition: color 0.3s ease;
         }
         
         .link-item:hover {
-            color: white;
-            background-color: #002FA7;
-            padding: 0.125rem 0.25rem;
-            border-radius: 4px;
+            color: #0047AB;
         }
         
         .publication-card {
@@ -121,13 +121,11 @@
         }
         
         .keyword-tag {
-            background-color: rgba(0, 47, 167, 0.1);
-            color: #002FA7;
+            background-color: #F3F4F6;
             padding: 0.25rem 0.75rem;
             border-radius: 9999px;
             font-size: 0.75rem;
-            border: 1px solid #002FA7;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease;
             cursor: pointer;
         }
         
@@ -138,34 +136,34 @@
         
         /* Dark mode styles */
         .dark .section-title {
-            color: #8ed716;
-            border-bottom-color: #8ed716;
+            color: #000000;
+            border-bottom-color: #FFFF00;
         }
         
         .dark .link-item {
-            color: #8ed716;
+            color: #000000;
         }
         
         .dark .link-item:hover {
-            color: #a8e649;
+            color: #333333;
         }
         
         .dark .publication-card {
-            border-left-color: #8ed716;
+            border-left-color: #FFFF00;
         }
         
         .dark .publication-card:hover {
-            background-color: rgba(142, 215, 22, 0.1);
+            background-color: rgba(255, 255, 0, 0.1);
         }
         
         .dark .keyword-tag {
-            background-color: rgba(142, 215, 22, 0.1);
-            border: 1px solid #8ed716;
-            color: #8ed716;
+            background-color: #000000;
+            border: 1px solid #FFFF00;
+            color: #FFFF00;
         }
         
         .dark .keyword-tag:hover {
-            background-color: #8ed716;
+            background-color: #FFFF00;
             color: #000000;
         }
         
@@ -177,82 +175,65 @@
         }
         
         .dark .about-section {
-            background-color: #8ed716;
-            color: black;
-            border: 1px solid black;
+            background-color: #000000;
+            color: #FFFF00;
+            border: 2px solid #FFFF00;
         }
         
         /* Navigation bar dark mode */
         .dark nav {
-            background-color: #e3e3e5;
-            border-bottom: 1px solid #8ed716;
+            background-color: #000000;
+            border-bottom: 2px solid #FFFF00;
         }
         
         .dark nav h1 {
-            color: #8ed716;
+            color: #FFFF00;
         }
         
         .dark nav a,
         .dark nav button {
-            color: #8ed716;
+            color: #FFFF00;
         }
         
         .dark nav a:hover,
         .dark nav button:hover {
-            color: #a8e649;
+            color: #FFFF33;
         }
         
         /* Research tags */
         .research-tag {
-            background-color: rgba(0, 47, 167, 0.1);
-            color: #002FA7;
+            background-color: rgba(255, 255, 255, 0.2);
             padding: 0.5rem 1rem;
             border-radius: 9999px;
             font-size: 0.875rem;
-            border: 1px solid #002FA7;
-            transition: all 0.3s ease;
-        }
-        
-        .research-tag:hover {
-            background-color: #002FA7;
-            color: white;
         }
         
         .dark .research-tag {
-            background-color: rgba(142, 215, 22, 0.1);
-            border: 1px solid #8ed716;
-            color: #8ed716;
-        }
-        
-        .dark .research-tag:hover {
-            background-color: #8ed716;
-            color: black;
+            background-color: #FFFF00;
+            border: 1px solid #000000;
+            color: #000000;
         }
         
         /* Contact icons */
         .contact-icon {
-            background-color: rgba(0, 47, 167, 0.1);
-            color: #002FA7;
+            background-color: rgba(255, 255, 255, 0.2);
             padding: 0.75rem;
             border-radius: 9999px;
-            border: 1px solid #002FA7;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease;
         }
         
         .contact-icon:hover {
-            background-color: #002FA7;
-            color: white;
+            background-color: rgba(255, 255, 255, 0.3);
         }
         
         .dark .contact-icon {
-            background-color: rgba(142, 215, 22, 0.1);
-            border: 1px solid #8ed716;
-            color: #8ed716;
+            background-color: #FFFF00;
+            border: 1px solid #000000;
+            color: #000000;
         }
         
         .dark .contact-icon:hover {
-            background-color: #8ed716;
-            color: black;
+            background-color: #FFFF33;
         }
     </style>
 </head>
@@ -261,13 +242,13 @@
     <nav class="sticky top-0 bg-white shadow-sm z-50 py-4 px-6 md:px-12">
         <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center">
             <h1 class="text-xl md:text-2xl font-bold text-klein">Yunke Qu</h1>
-            <div class="flex gap-4 mt-4 md:mt-0">
-                <a href="#about" class="text-[#002FA7] dark:text-[#8ed716] hover:bg-[#002FA7] hover:text-white dark:hover:bg-[#8ed716] dark:hover:text-black px-3 py-1 rounded transition-all" data-lang-key="about">About</a>
-                <a href="#education" class="text-[#002FA7] dark:text-[#8ed716] hover:bg-[#002FA7] hover:text-white dark:hover:bg-[#8ed716] dark:hover:text-black px-3 py-1 rounded transition-all" data-lang-key="education">Education</a>
-                <a href="#experience" class="text-[#002FA7] dark:text-[#8ed716] hover:bg-[#002FA7] hover:text-white dark:hover:bg-[#8ed716] dark:hover:text-black px-3 py-1 rounded transition-all" data-lang-key="experience">Experience</a>
-                <a href="#publications" class="text-[#002FA7] dark:text-[#8ed716] hover:bg-[#002FA7] hover:text-white dark:hover:bg-[#8ed716] dark:hover:text-black px-3 py-1 rounded transition-all" data-lang-key="publications">Publications</a>
-                <button id="lang-toggle" class="text-[#002FA7] dark:text-[#8ed716] hover:bg-[#002FA7] hover:text-white dark:hover:bg-[#8ed716] dark:hover:text-black px-3 py-1 rounded transition-all">中文</button>
-                <button id="dark-mode-toggle" class="text-[#002FA7] dark:text-[#8ed716] hover:bg-[#002FA7] hover:text-white dark:hover:bg-[#8ed716] dark:hover:text-black px-3 py-1 rounded transition-all">
+            <div class="flex gap-6 mt-4 md:mt-0">
+                <a href="#about" class="hover:text-klein transition-colors" data-lang-key="about">About</a>
+                <a href="#education" class="hover:text-klein transition-colors" data-lang-key="education">Education</a>
+                <a href="#experience" class="hover:text-klein transition-colors" data-lang-key="experience">Experience</a>
+                <a href="#publications" class="hover:text-klein transition-colors" data-lang-key="publications">Publications</a>
+                <button id="lang-toggle" class="hover:text-klein transition-colors">中文</button>
+                <button id="dark-mode-toggle" class="hover:text-klein transition-colors">
                     <i class="fa fa-moon-o"></i>
                 </button>
             </div>
@@ -457,7 +438,7 @@
     </footer>
 
     <!-- 回到顶部按钮 -->
-    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-8 right-8 bg-white text-[#002FA7] border border-[#002FA7] dark:bg-[#e3e3e5] dark:border-[#8ed716] dark:text-[#8ed716] w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-[#002FA7] hover:text-white dark:hover:bg-[#8ed716] dark:hover:text-black transition-all">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-8 right-8 bg-[#002FA7] text-white dark:bg-[#FFFF00] dark:border dark:border-black dark:text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-[#0047AB] dark:hover:bg-[#FFFF33] transition-colors">
         <i class="fa fa-arrow-up" aria-hidden="true"></i>
     </button>
 
