@@ -161,41 +161,43 @@
     <main class="max-w-7xl mx-auto px-6 md:px-12 py-12">
         <!-- 个人信息 -->
         <section id="about" class="mb-16">
-            <div class="about-section rounded-lg shadow-sm p-6 md:p-10">
+            <div class="relative">
+                <!-- Billboard background -->
+                <div class="absolute inset-0 bg-blue-100 rounded-lg"></div>
                 
-                <div class="relative z-10">
-                    <h2 class="text-5xl md:text-6xl font-bold mb-4">Yunke Qu</h2>
-                    <p class="text-xl mb-8" data-lang-key="phd-title">PhD in Artificial Intelligence | University of Queensland</p>
-                    
-                    <div class="mb-8">
-                        <h3 class="text-xl font-semibold mb-3" data-lang-key="research-focus">Research Focus:</h3>
-                        <div class="flex flex-col gap-2">
-                            <p class="text-lg">Recommender Systems</p>
-                            <p class="text-lg">Multimodal Learning</p>
-                            <p class="text-lg">Parameter-Efficient Finetuning</p>
-                            <p class="text-lg">Model Compression</p>
+                <!-- Billboard frame -->
+                <div class="relative bg-[#002FA7] rounded-lg shadow-xl p-8 border-8 border-gray-700 max-w-4xl mx-auto">
+                    <!-- Billboard content -->
+                    <div class="text-center">
+                        <h2 class="text-5xl md:text-6xl font-bold mb-4">Yunke Qu</h2>
+                        <p class="text-xl mb-8" data-lang-key="phd-title">PhD in Artificial Intelligence | University of Queensland</p>
+                        
+                        <hr class="border-white border-t-2 my-6">
+                        
+                        <div class="mb-8 text-left">
+                            <h3 class="text-xl font-semibold mb-3" data-lang-key="research-focus">Research Focus:</h3>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li class="text-lg">Recommender Systems</li>
+                                <li class="text-lg">Multimodal Learning</li>
+                                <li class="text-lg">Parameter-Efficient Finetuning</li>
+                                <li class="text-lg">Model Compression</li>
+                            </ul>
                         </div>
-                    </div>
-                    
-                    <hr class="border-white border-t-2 my-8">
-                    
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
-                        <div class="flex items-center mb-4 md:mb-0">
-                            <i class="fa fa-envelope mr-3"></i>
-                            <p class="text-lg">Email: yunke.qu@uq.edu.au</p>
-                        </div>
-                        <div class="flex gap-6">
+                        
+                        <hr class="border-white border-t-2 my-6">
+                        
+                        <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                            <a href="mailto:yunke.qu@uq.edu.au" class="flex items-center text-white hover:text-gray-200 transition-colors" title="Email">
+                                <i class="fa fa-envelope mr-2 text-2xl"></i>
+                            </a>
                             <a href="https://github.com/qykcq" class="flex items-center text-white hover:text-gray-200 transition-colors" title="GitHub" target="_blank">
-                                <i class="fa fa-github mr-2"></i>
-                                <span>GitHub</span>
+                                <i class="fa fa-github mr-2 text-2xl"></i>
                             </a>
                             <a href="https://scholar.google.com/citations?user=oup2M48AAAAJ&hl=en" class="flex items-center text-white hover:text-gray-200 transition-colors" title="Google Scholar" target="_blank">
-                                <i class="fa fa-google mr-2"></i>
-                                <span>Google Scholar</span>
+                                <i class="fa fa-google mr-2 text-2xl"></i>
                             </a>
                             <a href="https://www.linkedin.com/in/ykqu/" class="flex items-center text-white hover:text-gray-200 transition-colors" title="LinkedIn" target="_blank">
-                                <i class="fa fa-linkedin mr-2"></i>
-                                <span>LinkedIn</span>
+                                <i class="fa fa-linkedin mr-2 text-2xl"></i>
                             </a>
                         </div>
                     </div>
