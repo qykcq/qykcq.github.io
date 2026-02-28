@@ -51,79 +51,94 @@
         }
         
         /* Animation styles */
-        .fade-in {
-            animation: fadeIn 1s ease-in-out;
+        .typing {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid white;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
         }
         
-        .slide-in-left {
-            animation: slideInLeft 0.8s ease-out;
+        .float-in {
+            animation: floatIn 1.5s ease-out;
         }
         
-        .slide-in-right {
-            animation: slideInRight 0.8s ease-out;
+        .float {
+            animation: float 6s ease-in-out infinite;
         }
         
-        .scale-in {
-            animation: scaleIn 0.6s ease-out;
+        .glow {
+            animation: glow 2s ease-in-out infinite alternate;
         }
         
-        .pulse {
-            animation: pulse 2s infinite;
+        .zoom-in {
+            animation: zoomIn 1s ease-out;
         }
         
-        @keyframes fadeIn {
+        .rotate-in {
+            animation: rotateIn 1s ease-out;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: white }
+        }
+        
+        @keyframes floatIn {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(30px) scale(0.9);
             }
             to {
                 opacity: 1;
-                transform: translateY(0);
+                transform: translateY(0) scale(1);
             }
         }
         
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
-        @keyframes scaleIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-        
-        @keyframes pulse {
+        @keyframes float {
             0% {
-                transform: scale(1);
+                transform: translateY(0px);
             }
             50% {
-                transform: scale(1.05);
+                transform: translateY(-10px);
             }
             100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+            }
+            to {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.5);
+            }
+        }
+        
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
                 transform: scale(1);
+            }
+        }
+        
+        @keyframes rotateIn {
+            from {
+                opacity: 0;
+                transform: rotate(-10deg) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: rotate(0deg) scale(1);
             }
         }
         
@@ -132,40 +147,32 @@
             animation-delay: 0.1s;
         }
         
-        .delay-200 {
-            animation-delay: 0.2s;
-        }
-        
         .delay-300 {
             animation-delay: 0.3s;
-        }
-        
-        .delay-400 {
-            animation-delay: 0.4s;
-        }
-        
-        .delay-500 {
-            animation-delay: 0.5s;
         }
         
         .delay-600 {
             animation-delay: 0.6s;
         }
         
-        .delay-700 {
-            animation-delay: 0.7s;
-        }
-        
-        .delay-800 {
-            animation-delay: 0.8s;
-        }
-        
         .delay-900 {
             animation-delay: 0.9s;
         }
         
-        .delay-1000 {
-            animation-delay: 1s;
+        .delay-1200 {
+            animation-delay: 1.2s;
+        }
+        
+        .delay-1500 {
+            animation-delay: 1.5s;
+        }
+        
+        .delay-1800 {
+            animation-delay: 1.8s;
+        }
+        
+        .delay-2100 {
+            animation-delay: 2.1s;
         }
     </style>
 </head>
@@ -186,37 +193,38 @@
     <main class="max-w-7xl mx-auto px-6 md:px-12 py-12">
         <!-- 个人信息 -->
         <section id="about" class="mb-16">
-            <div class="bg-klein text-white rounded-lg shadow-sm p-6 md:p-10 relative overflow-hidden fade-in">
+            <div class="bg-klein text-white rounded-lg shadow-sm p-6 md:p-10 relative overflow-hidden float-in">
                 <!-- Background decorative elements -->
-                <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32 scale-in delay-200"></div>
-                <div class="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full -ml-24 -mb-24 scale-in delay-400"></div>
+                <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32 float delay-300"></div>
+                <div class="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full -ml-24 -mb-24 float delay-600"></div>
+                <div class="absolute top-1/2 left-1/4 w-32 h-32 bg-white/5 rounded-full float delay-900"></div>
                 
                 <div class="relative z-10">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4 slide-in-left">Yunke Qu</h2>
-                    <p class="text-lg mb-6 slide-in-left delay-100">PhD in Artificial Intelligence | University of Queensland</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 typing glow">Yunke Qu</h2>
+                    <p class="text-lg mb-6 float-in delay-300">PhD in Artificial Intelligence | University of Queensland</p>
                     
-                    <div class="mb-6 slide-in-right delay-200">
-                        <h3 class="text-xl font-semibold mb-3">Research Focus</h3>
+                    <div class="mb-6 float-in delay-600">
+                        <h3 class="text-xl font-semibold mb-3 glow">Research Focus</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-white/20 px-4 py-2 rounded-full text-sm scale-in delay-300">Recommender Systems</span>
-                            <span class="bg-white/20 px-4 py-2 rounded-full text-sm scale-in delay-400">Multimodal Learning</span>
-                            <span class="bg-white/20 px-4 py-2 rounded-full text-sm scale-in delay-500">Parameter-Efficient Finetuning</span>
-                            <span class="bg-white/20 px-4 py-2 rounded-full text-sm scale-in delay-600">Model Compression</span>
+                            <span class="bg-white/20 px-4 py-2 rounded-full text-sm zoom-in delay-900">Recommender Systems</span>
+                            <span class="bg-white/20 px-4 py-2 rounded-full text-sm zoom-in delay-1200">Multimodal Learning</span>
+                            <span class="bg-white/20 px-4 py-2 rounded-full text-sm zoom-in delay-1500">Parameter-Efficient Finetuning</span>
+                            <span class="bg-white/20 px-4 py-2 rounded-full text-sm zoom-in delay-1800">Model Compression</span>
                         </div>
                     </div>
                     
-                    <div class="mt-6 slide-in-left delay-700">
+                    <div class="mt-6 float-in delay-1200">
                         <div class="flex gap-4">
-                            <a href="mailto:yunke.qu@uq.net.au" class="bg-white/20 p-3 rounded-full hover:bg-white/30 transition-colors scale-in delay-700" title="Email">
+                            <a href="mailto:yunke.qu@uq.net.au" class="bg-white/20 p-3 rounded-full hover:bg-white/30 transition-colors rotate-in delay-1200" title="Email">
                                 <i class="fa fa-envelope"></i>
                             </a>
-                            <a href="https://scholar.google.com/citations?user=oup2M48AAAAJ&hl=en" class="bg-white/20 p-3 rounded-full hover:bg-white/30 transition-colors scale-in delay-800" title="Google Scholar" target="_blank">
+                            <a href="https://scholar.google.com/citations?user=oup2M48AAAAJ&hl=en" class="bg-white/20 p-3 rounded-full hover:bg-white/30 transition-colors rotate-in delay-1500" title="Google Scholar" target="_blank">
                                 <i class="fa fa-google"></i>
                             </a>
-                            <a href="https://github.com/qykcq" class="bg-white/20 p-3 rounded-full hover:bg-white/30 transition-colors scale-in delay-900" title="GitHub" target="_blank">
+                            <a href="https://github.com/qykcq" class="bg-white/20 p-3 rounded-full hover:bg-white/30 transition-colors rotate-in delay-1800" title="GitHub" target="_blank">
                                 <i class="fa fa-github"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/ykqu/" class="bg-white/20 p-3 rounded-full hover:bg-white/30 transition-colors scale-in delay-1000" title="LinkedIn" target="_blank">
+                            <a href="https://www.linkedin.com/in/ykqu/" class="bg-white/20 p-3 rounded-full hover:bg-white/30 transition-colors rotate-in delay-2100" title="LinkedIn" target="_blank">
                                 <i class="fa fa-linkedin"></i>
                             </a>
                         </div>
