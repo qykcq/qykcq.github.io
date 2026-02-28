@@ -39,17 +39,8 @@
                 @apply flex items-center gap-2 text-grayDark;
             }
             .publication-card {
-            @apply border-l-4 border-klein pl-4 py-2 mb-4 hover:bg-grayLight rounded-r transition-colors duration-300;
-        }
-        .experience-card {
-            @apply relative overflow-hidden;
-        }
-        .company-logo {
-            @apply absolute -right-10 -top-10 w-24 h-24 opacity-0 transition-all duration-300 transform translate-x-4 translate-y-4;
-        }
-        .experience-card:hover .company-logo {
-            @apply opacity-100 translate-x-0 translate-y-0;
-        }
+                @apply border-l-4 border-klein pl-4 py-2 mb-4 hover:bg-grayLight rounded-r transition-colors duration-300;
+            }
         }
         html {
             scroll-behavior: smooth;
@@ -82,23 +73,23 @@
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Yunke Qu</h2>
                     <p class="text-lg mb-6">PhD in Artificial Intelligence | University of Queensland</p>
                     <p class="text-sm text-gray-200 mb-6">Research Focus: Recommender Systems, Multimodal Learning, Parameter-Efficient Finetuning, Model Compression, AutoML, Reinforcement Learning</p>
-                    <div class="flex flex-wrap gap-6">
-                        <div class="flex items-center gap-2 text-white">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-white">
+                        <a href="mailto:yunke.qu@uq.net.au" class="flex items-center gap-2 hover:text-gray-200 transition-colors duration-300">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
-                            <a href="mailto:yunke.qu@uq.net.au" class="text-white hover:text-gray-200 underline underline-offset-4 transition-colors duration-300">yunke.qu@uq.net.au</a>
-                        </div>
-                        <div class="flex items-center gap-2 text-white">
+                            <span>yunke.qu@uq.net.au</span>
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=oup2M48AAAAJ&hl=en" class="flex items-center gap-2 hover:text-gray-200 transition-colors duration-300" target="_blank">
                             <i class="fa fa-google" aria-hidden="true"></i>
-                            <a href="https://scholar.google.com/citations?user=oup2M48AAAAJ&hl=en" class="text-white hover:text-gray-200 underline underline-offset-4 transition-colors duration-300" target="_blank">Google Scholar</a>
-                        </div>
-                        <div class="flex items-center gap-2 text-white">
+                            <span>Google Scholar</span>
+                        </a>
+                        <a href="https://github.com/qykcq" class="flex items-center gap-2 hover:text-gray-200 transition-colors duration-300" target="_blank">
                             <i class="fa fa-github" aria-hidden="true"></i>
-                            <a href="https://github.com/qykcq" class="text-white hover:text-gray-200 underline underline-offset-4 transition-colors duration-300" target="_blank">GitHub</a>
-                        </div>
-                        <div class="flex items-center gap-2 text-white">
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ykqu/" class="flex items-center gap-2 hover:text-gray-200 transition-colors duration-300" target="_blank">
                             <i class="fa fa-linkedin" aria-hidden="true"></i>
-                            <a href="https://www.linkedin.com/in/ykqu/" class="text-white hover:text-gray-200 underline underline-offset-4 transition-colors duration-300" target="_blank">LinkedIn</a>
-                        </div>
+                            <span>LinkedIn</span>
+                        </a>
                     </div>
                 </div>
                 <div class="md:w-1/2 flex justify-center">
@@ -137,10 +128,7 @@
             <h2 class="section-title">Professional Experience</h2>
             <div class="grid md:grid-cols-1 gap-6">
                 <!-- TikTok Intern -->
-                <div class="card experience-card">
-                    <div class="company-logo bg-black rounded-full flex items-center justify-center text-white text-3xl">
-                        <i class="fa fa-music" aria-hidden="true"></i>
-                    </div>
+                <div class="card">
                     <div class="flex justify-between items-start mb-3">
                         <h3 class="text-xl font-bold">TikTok</h3>
                         <p class="text-sm text-gray-600">Sep 2025 – Feb 2026</p>
@@ -149,10 +137,7 @@
                     <p class="mb-0">Working to enhance the livestream recommender system at TikTok Shop.</p>
                 </div>
                 <!-- UQ Research Assistant -->
-                <div class="card experience-card">
-                    <div class="company-logo bg-klein rounded-full flex items-center justify-center text-white text-3xl">
-                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                    </div>
+                <div class="card">
                     <div class="flex justify-between items-start mb-3">
                         <h3 class="text-xl font-bold">University of Queensland</h3>
                         <p class="text-sm text-gray-600">Nov 2020 – Dec 2021</p>
