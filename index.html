@@ -149,6 +149,75 @@
             background-color: #00FF41;
             color: #000000;
         }
+        
+        /* About section styles */
+        .about-section {
+            background-color: #002FA7;
+            color: white;
+            border: 1px solid transparent;
+        }
+        
+        .dark .about-section {
+            background-color: #00FF41;
+            color: black;
+            border: 1px solid black;
+        }
+        
+        /* Navigation bar dark mode */
+        .dark nav {
+            background-color: #000000;
+            border-bottom: 1px solid #00FF41;
+        }
+        
+        .dark nav h1 {
+            color: #00FF41;
+        }
+        
+        .dark nav a,
+        .dark nav button {
+            color: #00FF41;
+        }
+        
+        .dark nav a:hover,
+        .dark nav button:hover {
+            color: #33FF71;
+        }
+        
+        /* Research tags */
+        .research-tag {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+        }
+        
+        .dark .research-tag {
+            background-color: #000000;
+            border: 1px solid #000000;
+            color: #00FF41;
+        }
+        
+        /* Contact icons */
+        .contact-icon {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 0.75rem;
+            border-radius: 9999px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .contact-icon:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .dark .contact-icon {
+            background-color: #000000;
+            border: 1px solid #000000;
+            color: #00FF41;
+        }
+        
+        .dark .contact-icon:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
     </style>
 </head>
 <body class="font-sans text-grayDark">
@@ -172,7 +241,7 @@
     <main class="max-w-7xl mx-auto px-6 md:px-12 py-12">
         <!-- 个人信息 -->
         <section id="about" class="mb-16">
-            <div class="bg-[#002FA7] text-white dark:bg-[#00FF41] dark:border dark:border-black dark:text-black rounded-lg shadow-sm p-6 md:p-10">
+            <div class="about-section rounded-lg shadow-sm p-6 md:p-10">
                 
                 <div class="relative z-10">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Yunke Qu</h2>
@@ -181,25 +250,25 @@
                     <div class="mb-6">
                         <h3 class="text-xl font-semibold mb-3" data-lang-key="research-focus">Research Focus</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-white/20 dark:bg-black dark:border dark:border-black dark:text-[#00FF41] px-4 py-2 rounded-full text-sm" data-lang-key="recommender-systems">Recommender Systems</span>
-                            <span class="bg-white/20 dark:bg-black dark:border dark:border-black dark:text-[#00FF41] px-4 py-2 rounded-full text-sm" data-lang-key="multimodal-learning">Multimodal Learning</span>
-                            <span class="bg-white/20 dark:bg-black dark:border dark:border-black dark:text-[#00FF41] px-4 py-2 rounded-full text-sm" data-lang-key="parameter-efficient">Parameter-Efficient Finetuning</span>
-                            <span class="bg-white/20 dark:bg-black dark:border dark:border-black dark:text-[#00FF41] px-4 py-2 rounded-full text-sm" data-lang-key="model-compression">Model Compression</span>
+                            <span class="research-tag" data-lang-key="recommender-systems">Recommender Systems</span>
+                            <span class="research-tag" data-lang-key="multimodal-learning">Multimodal Learning</span>
+                            <span class="research-tag" data-lang-key="parameter-efficient">Parameter-Efficient Finetuning</span>
+                            <span class="research-tag" data-lang-key="model-compression">Model Compression</span>
                         </div>
                     </div>
                     
                     <div class="mt-6">
                         <div class="flex gap-4">
-                            <a href="mailto:yunke.qu@uq.net.au" class="bg-white/20 dark:bg-black dark:border dark:border-black dark:text-[#00FF41] p-3 rounded-full hover:bg-white/30 dark:hover:bg-grayLight transition-colors" title="Email">
+                            <a href="mailto:yunke.qu@uq.net.au" class="contact-icon" title="Email">
                                 <i class="fa fa-envelope"></i>
                             </a>
-                            <a href="https://scholar.google.com/citations?user=oup2M48AAAAJ&hl=en" class="bg-white/20 dark:bg-black dark:border dark:border-black dark:text-[#00FF41] p-3 rounded-full hover:bg-white/30 dark:hover:bg-grayLight transition-colors" title="Google Scholar" target="_blank">
+                            <a href="https://scholar.google.com/citations?user=oup2M48AAAAJ&hl=en" class="contact-icon" title="Google Scholar" target="_blank">
                                 <i class="fa fa-google"></i>
                             </a>
-                            <a href="https://github.com/qykcq" class="bg-white/20 dark:bg-black dark:border dark:border-black dark:text-[#00FF41] p-3 rounded-full hover:bg-white/30 dark:hover:bg-grayLight transition-colors" title="GitHub" target="_blank">
+                            <a href="https://github.com/qykcq" class="contact-icon" title="GitHub" target="_blank">
                                 <i class="fa fa-github"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/ykqu/" class="bg-white/20 dark:bg-black dark:border dark:border-black dark:text-[#00FF41] p-3 rounded-full hover:bg-white/30 dark:hover:bg-grayLight transition-colors" title="LinkedIn" target="_blank">
+                            <a href="https://www.linkedin.com/in/ykqu/" class="contact-icon" title="LinkedIn" target="_blank">
                                 <i class="fa fa-linkedin"></i>
                             </a>
                         </div>
