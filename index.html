@@ -6,7 +6,8 @@
     <title>Yunke Qu - Personal Homepage</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* Tailwind CSS CDN */
         @tailwind base;
@@ -26,14 +27,14 @@
         }
         
         .dark {
-            --bg-color: #e3e3e5;
-            --text-color: #000000;
-            --card-bg: #e3e3e5;
-            --card-border: #FFFF00;
-            --footer-bg: #e3e3e5;
-            --footer-text: #000000;
-            --accent-color: #FFFF00;
-            --accent-light: #FFFF33;
+            --bg-color: #000000;
+            --text-color: #8ed716;
+            --card-bg: #000000;
+            --card-border: #8ed716;
+            --footer-bg: #000000;
+            --footer-text: #8ed716;
+            --accent-color: #8ed716;
+            --accent-light: #a9e64c;
         }
         
         html {
@@ -44,11 +45,7 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             transition: background-color 0.3s ease, color 0.3s ease;
-            font-family: 'Inter', system-ui, sans-serif;
-        }
-        
-        .dark body {
-            font-family: 'Anton', sans-serif;
+            font-family: 'Rajdhani', 'Orbitron', 'Courier New', monospace;
         }
         
         nav {
@@ -60,18 +57,6 @@
             background-color: var(--footer-bg);
             color: var(--footer-text);
             transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        
-        .dark footer {
-            border-top: 2px solid #FFFF00;
-        }
-        
-        .dark footer a {
-            color: #000000;
-        }
-        
-        .dark footer a:hover {
-            color: #333333;
         }
         
         .section-title {
@@ -136,34 +121,33 @@
         
         /* Dark mode styles */
         .dark .section-title {
-            color: #000000;
-            border-bottom-color: #FFFF00;
+            color: #8ed716;
+            border-bottom-color: #8ed716;
         }
         
         .dark .link-item {
-            color: #000000;
+            color: #8ed716;
         }
         
         .dark .link-item:hover {
-            color: #333333;
+            color: #a9e64c;
         }
         
         .dark .publication-card {
-            border-left-color: #FFFF00;
+            border-left-color: #8ed716;
         }
         
         .dark .publication-card:hover {
-            background-color: rgba(255, 255, 0, 0.1);
+            background-color: #1F2937;
         }
         
         .dark .keyword-tag {
             background-color: #000000;
-            border: 1px solid #FFFF00;
-            color: #FFFF00;
+            border: 1px solid #8ed716;
         }
         
         .dark .keyword-tag:hover {
-            background-color: #FFFF00;
+            background-color: #8ed716;
             color: #000000;
         }
         
@@ -176,28 +160,28 @@
         
         .dark .about-section {
             background-color: #000000;
-            color: #FFFF00;
-            border: 2px solid #FFFF00;
+            color: #8ed716;
+            border: 1px solid #8ed716;
         }
         
         /* Navigation bar dark mode */
         .dark nav {
             background-color: #000000;
-            border-bottom: 2px solid #FFFF00;
+            border-bottom: 1px solid #8ed716;
         }
         
         .dark nav h1 {
-            color: #FFFF00;
+            color: #8ed716;
         }
         
         .dark nav a,
         .dark nav button {
-            color: #FFFF00;
+            color: #8ed716;
         }
         
         .dark nav a:hover,
         .dark nav button:hover {
-            color: #FFFF33;
+            color: #a9e64c;
         }
         
         /* Research tags */
@@ -209,9 +193,9 @@
         }
         
         .dark .research-tag {
-            background-color: #FFFF00;
-            border: 1px solid #000000;
-            color: #000000;
+            background-color: #000000;
+            border: 1px solid #8ed716;
+            color: #8ed716;
         }
         
         /* Contact icons */
@@ -227,13 +211,13 @@
         }
         
         .dark .contact-icon {
-            background-color: #FFFF00;
-            border: 1px solid #000000;
-            color: #000000;
+            background-color: #000000;
+            border: 1px solid #8ed716;
+            color: #8ed716;
         }
         
         .dark .contact-icon:hover {
-            background-color: #FFFF33;
+            background-color: rgba(255, 255, 255, 0.1);
         }
     </style>
 </head>
@@ -438,7 +422,7 @@
     </footer>
 
     <!-- 回到顶部按钮 -->
-    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-8 right-8 bg-[#002FA7] text-white dark:bg-[#FFFF00] dark:border dark:border-black dark:text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-[#0047AB] dark:hover:bg-[#FFFF33] transition-colors">
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-8 right-8 bg-[#002FA7] text-white dark:bg-black dark:border dark:border-[#8ed716] dark:text-[#8ed716] w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-[#0047AB] dark:hover:bg-grayLight transition-colors">
         <i class="fa fa-arrow-up" aria-hidden="true"></i>
     </button>
 
