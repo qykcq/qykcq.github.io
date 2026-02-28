@@ -30,24 +30,62 @@
                 @apply text-2xl md:text-3xl font-bold text-klein border-b-2 border-klein pb-2 mb-6;
             }
             .card {
-                @apply bg-white rounded-lg shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow duration-300;
+                @apply bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 p-6 hover:shadow-md transition-shadow duration-300;
             }
             .link-item {
                 @apply text-klein hover:text-kleinLight underline underline-offset-4 transition-colors duration-300;
             }
             .icon-text {
-                @apply flex items-center gap-2 text-grayDark;
+                @apply flex items-center gap-2 text-grayDark dark:text-gray-200;
             }
             .publication-card {
-                @apply border-l-4 border-klein pl-4 py-2 mb-4 hover:bg-grayLight rounded-r transition-colors duration-300;
+                @apply border-l-4 border-klein pl-4 py-2 mb-4 hover:bg-grayLight dark:hover:bg-gray-800 rounded-r transition-colors duration-300;
             }
         }
+        :root {
+            --bg-color: #FFFFFF;
+            --text-color: #333647;
+            --card-bg: #FFFFFF;
+            --card-border: #E5E7EB;
+            --footer-bg: #F5F7FA;
+            --footer-text: #6B7280;
+        }
+        
+        .dark {
+            --bg-color: #121212;
+            --text-color: #E5E7EB;
+            --card-bg: #1F2937;
+            --card-border: #374151;
+            --footer-bg: #1F2937;
+            --footer-text: #9CA3AF;
+        }
+        
         html {
             scroll-behavior: smooth;
         }
+        
         body {
-            background-color: #FFFFFF;
-            color: #333647;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        nav {
+            background-color: var(--card-bg);
+            transition: background-color 0.3s ease;
+        }
+        
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+            border-color: var(--card-border);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
         }
     </style>
 </head>
@@ -61,8 +99,10 @@
                 <a href="#education" class="hover:text-klein transition-colors" data-lang-key="education">Education</a>
                 <a href="#experience" class="hover:text-klein transition-colors" data-lang-key="experience">Experience</a>
                 <a href="#publications" class="hover:text-klein transition-colors" data-lang-key="publications">Publications</a>
-                <a href="substance.html" class="hover:text-klein transition-colors" title="The Substance">💉</a>
                 <button id="lang-toggle" class="hover:text-klein transition-colors">中文</button>
+                <button id="dark-mode-toggle" class="hover:text-klein transition-colors">
+                    <i class="fa fa-moon-o"></i>
+                </button>
             </div>
         </div>
     </nav>
@@ -328,6 +368,28 @@
 
         // Add event listener to language toggle button
         document.getElementById('lang-toggle').addEventListener('click', toggleLanguage);
+
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const htmlElement = document.documentElement;
+
+        // Check for saved dark mode preference or system preference
+        if (localStorage.getItem('darkMode') === 'true' || 
+            (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+            darkModeToggle.innerHTML = '<i class="fa fa-sun-o"></i>';
+        }
+
+        // Dark mode toggle function
+        function toggleDarkMode() {
+            htmlElement.classList.toggle('dark');
+            const isDark = htmlElement.classList.contains('dark');
+            localStorage.setItem('darkMode', isDark);
+            darkModeToggle.innerHTML = isDark ? '<i class="fa fa-sun-o"></i>' : '<i class="fa fa-moon-o"></i>';
+        }
+
+        // Add event listener to dark mode toggle button
+        darkModeToggle.addEventListener('click', toggleDarkMode);
     </script>
 </body>
 </html>
