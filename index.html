@@ -49,6 +49,124 @@
             background-color: #FFFFFF;
             color: #333647;
         }
+        
+        /* Animation styles */
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        .slide-in-left {
+            animation: slideInLeft 0.8s ease-out;
+        }
+        
+        .slide-in-right {
+            animation: slideInRight 0.8s ease-out;
+        }
+        
+        .scale-in {
+            animation: scaleIn 0.6s ease-out;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        /* Staggered animation delays */
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+        
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+        
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+        
+        .delay-400 {
+            animation-delay: 0.4s;
+        }
+        
+        .delay-500 {
+            animation-delay: 0.5s;
+        }
+        
+        .delay-600 {
+            animation-delay: 0.6s;
+        }
+        
+        .delay-700 {
+            animation-delay: 0.7s;
+        }
+        
+        .delay-800 {
+            animation-delay: 0.8s;
+        }
+        
+        .delay-900 {
+            animation-delay: 0.9s;
+        }
+        
+        .delay-1000 {
+            animation-delay: 1s;
+        }
     </style>
 </head>
 <body class="font-sans text-grayDark">
@@ -68,37 +186,37 @@
     <main class="max-w-7xl mx-auto px-6 md:px-12 py-12">
         <!-- 个人信息 -->
         <section id="about" class="mb-16">
-            <div class="bg-klein text-white rounded-lg shadow-sm p-6 md:p-10 relative overflow-hidden">
+            <div class="bg-klein text-white rounded-lg shadow-sm p-6 md:p-10 relative overflow-hidden fade-in">
                 <!-- Background decorative elements -->
-                <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32"></div>
-                <div class="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full -ml-24 -mb-24"></div>
+                <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32 scale-in delay-200"></div>
+                <div class="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full -ml-24 -mb-24 scale-in delay-400"></div>
                 
                 <div class="relative z-10">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Yunke Qu</h2>
-                    <p class="text-lg mb-6">PhD in Artificial Intelligence | University of Queensland</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 slide-in-left">Yunke Qu</h2>
+                    <p class="text-lg mb-6 slide-in-left delay-100">PhD in Artificial Intelligence | University of Queensland</p>
                     
-                    <div class="mb-6">
+                    <div class="mb-6 slide-in-right delay-200">
                         <h3 class="text-xl font-semibold mb-3">Research Focus</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-white/20 px-4 py-2 rounded-full text-sm">Recommender Systems</span>
-                            <span class="bg-white/20 px-4 py-2 rounded-full text-sm">Multimodal Learning</span>
-                            <span class="bg-white/20 px-4 py-2 rounded-full text-sm">Parameter-Efficient Finetuning</span>
-                            <span class="bg-white/20 px-4 py-2 rounded-full text-sm">Model Compression</span>
+                            <span class="bg-white/20 px-4 py-2 rounded-full text-sm scale-in delay-300">Recommender Systems</span>
+                            <span class="bg-white/20 px-4 py-2 rounded-full text-sm scale-in delay-400">Multimodal Learning</span>
+                            <span class="bg-white/20 px-4 py-2 rounded-full text-sm scale-in delay-500">Parameter-Efficient Finetuning</span>
+                            <span class="bg-white/20 px-4 py-2 rounded-full text-sm scale-in delay-600">Model Compression</span>
                         </div>
                     </div>
                     
-                    <div class="mt-6">
+                    <div class="mt-6 slide-in-left delay-700">
                         <div class="flex gap-4">
-                            <a href="mailto:yunke.qu@uq.net.au" class="bg-white/20 p-3 rounded-full hover:bg-white/30 transition-colors" title="Email">
+                            <a href="mailto:yunke.qu@uq.net.au" class="bg-white/20 p-3 rounded-full hover:bg-white/30 transition-colors scale-in delay-700" title="Email">
                                 <i class="fa fa-envelope"></i>
                             </a>
-                            <a href="https://scholar.google.com/citations?user=oup2M48AAAAJ&hl=en" class="bg-white/20 p-3 rounded-full hover:bg-white/30 transition-colors" title="Google Scholar" target="_blank">
+                            <a href="https://scholar.google.com/citations?user=oup2M48AAAAJ&hl=en" class="bg-white/20 p-3 rounded-full hover:bg-white/30 transition-colors scale-in delay-800" title="Google Scholar" target="_blank">
                                 <i class="fa fa-google"></i>
                             </a>
-                            <a href="https://github.com/qykcq" class="bg-white/20 p-3 rounded-full hover:bg-white/30 transition-colors" title="GitHub" target="_blank">
+                            <a href="https://github.com/qykcq" class="bg-white/20 p-3 rounded-full hover:bg-white/30 transition-colors scale-in delay-900" title="GitHub" target="_blank">
                                 <i class="fa fa-github"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/ykqu/" class="bg-white/20 p-3 rounded-full hover:bg-white/30 transition-colors" title="LinkedIn" target="_blank">
+                            <a href="https://www.linkedin.com/in/ykqu/" class="bg-white/20 p-3 rounded-full hover:bg-white/30 transition-colors scale-in delay-1000" title="LinkedIn" target="_blank">
                                 <i class="fa fa-linkedin"></i>
                             </a>
                         </div>
