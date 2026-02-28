@@ -161,12 +161,19 @@
     <main class="max-w-7xl mx-auto px-6 md:px-12 py-12">
         <!-- 个人信息 -->
         <section id="about" class="mb-16">
-            <div class="relative">
-                <!-- Billboard background -->
-                <div class="absolute inset-0 bg-blue-100 rounded-lg"></div>
+            <div class="relative rounded-lg overflow-hidden shadow-2xl p-12">
+                <!-- Building wall background with more realistic texture -->
+                <div class="absolute inset-0 bg-[#e0e0e0]" style="background-image: linear-gradient(to right, #d0d0d0 25%, #e0e0e0 25%, #e0e0e0 50%, #d0d0d0 50%, #d0d0d0 75%, #e0e0e0 75%, #e0e0e0 100%); background-size: 40px 40px;"></div>
                 
-                <!-- Billboard frame -->
-                <div class="relative bg-[#002FA7] rounded-lg shadow-xl p-8 border-8 border-gray-700 max-w-4xl mx-auto">
+                <!-- Add some shadow effects to simulate outdoor lighting -->
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent to-rgba(0,0,0,0.1)"></div>
+                
+                <!-- Billboard mount structure -->
+                <div class="absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/2 h-16 w-16 bg-gray-700 rounded-full shadow-lg"></div>
+                <div class="absolute left-1/2 top-0 transform -translate-x-1/2 h-8 w-2 bg-gray-700 shadow-md"></div>
+                
+                <!-- Billboard structure with slight rotation for realism -->
+                <div class="relative bg-[#002FA7] rounded-lg shadow-2xl p-8 border-8 border-gray-700 max-w-4xl mx-auto mt-8 mb-8 transform rotate-1">
                     <!-- Billboard content -->
                     <div class="text-center">
                         <h2 class="text-5xl md:text-6xl font-bold mb-4">Yunke Qu</h2>
@@ -176,12 +183,7 @@
                         
                         <div class="mb-8 text-left">
                             <h3 class="text-xl font-semibold mb-3" data-lang-key="research-focus">Research Focus:</h3>
-                            <ul class="list-disc list-inside space-y-2">
-                                <li class="text-lg">Recommender Systems</li>
-                                <li class="text-lg">Multimodal Learning</li>
-                                <li class="text-lg">Parameter-Efficient Finetuning</li>
-                                <li class="text-lg">Model Compression</li>
-                            </ul>
+                            <p class="text-lg">Recommender Systems · Multimodal Learning · Parameter-Efficient Finetuning · Model Compression</p>
                         </div>
                         
                         <hr class="border-white border-t-2 my-6">
@@ -202,6 +204,13 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- Billboard base support -->
+                <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 h-16 w-4 bg-gray-700 shadow-md"></div>
+                <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-1/2 h-8 w-24 bg-gray-700 rounded-full shadow-lg"></div>
+                
+                <!-- Add some ground shadow -->
+                <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-1/2 h-4 w-96 bg-gray-500 rounded-full opacity-30"></div>
             </div>
         </section>
 
